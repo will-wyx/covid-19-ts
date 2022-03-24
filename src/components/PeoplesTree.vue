@@ -1,9 +1,19 @@
 <template>
-  <el-tree node-key="id" show-checkbox :data="treeData" :props="defaultProps" class="peoples-tree" v-loading="loading"
-           @check="handleCheck"
-           @node-click="handleClick"
+  <el-tree
+      node-key="id"
+      show-checkbox
+      :data="treeData"
+      :props="defaultProps"
+      class="peoples-tree"
+      v-loading="loading"
+      @check="handleCheck"
+      @node-click="handleClick"
   >
-     <span :class="{invalid: node.level === 3 && !data.location}" slot-scope="{ node, data }">
+     <span :class="{
+       accurate0: node.level === 3 && !data.accurate,
+       accurate1: node.level === 3 && data.accurate===1,
+       accurate2: node.level === 3 && data.accurate===2,
+     }" slot-scope="{ node, data }">
        {{ data.label }}
      </span>
   </el-tree>
@@ -91,8 +101,14 @@ export default {
   overflow: auto;
   box-sizing: border-box;
 
-  .invalid {
-    color: red
+  .accurate0 {
+    color: #F56C6C
+  }
+  .accurate1 {
+    color: #E6A23C
+  }
+  .accurate2 {
+    color: #67C23A
   }
 }
 </style>

@@ -80,8 +80,9 @@ export default {
                 origin: keywords,
                 district, name, location: {
                   lng: location.lng,
-                  lat: location.lat
-                }
+                  lat: location.lat,
+                },
+                accurate: 1
               }
             } else {
               pos = {
