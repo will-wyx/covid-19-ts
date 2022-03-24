@@ -69,7 +69,7 @@ export default {
         list.push({
           id: people.id,
           no: +no,
-          label: `${no} ${people.area}`,
+          label: `${no} ${people.area} (${children.length})`,
           children
         })
       })
@@ -78,8 +78,8 @@ export default {
       wData.sort((a, b) => a.no - b.no)
 
       return [
-        { id: 'q', label: '确诊', children: qData },
-        { id: 'w', label: '无症状', children: wData },
+        { id: 'q', label: `确诊 [${qData.length}]`, children: qData },
+        { id: 'w', label: `无症状 [${wData.length}]`, children: wData },
       ]
     }
   },
