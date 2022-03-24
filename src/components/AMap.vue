@@ -40,6 +40,7 @@ export default {
         this.cluster.setMap(null);
       }
       this.cluster = new this.AMap.MarkerCluster(this.map, points, { gridSize: 60 });
+      this.map.setFitView(null, true)
     }
   },
   methods: {

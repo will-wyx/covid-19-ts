@@ -9,7 +9,9 @@
       @check="handleCheck"
       @node-click="handleClick"
   >
-     <span :class="{
+     <span
+         class="peoples-tree__label"
+         :class="{
        accurate0: node.level === 3 && !data.accurate,
        accurate1: node.level === 3 && data.accurate===1,
        accurate2: node.level === 3 && data.accurate===2,
@@ -100,6 +102,10 @@ export default {
   height: 100%;
   overflow: auto;
   box-sizing: border-box;
+
+  &__label {
+    font-size: 14px;
+  }
 
   .accurate0 {
     color: #F56C6C
