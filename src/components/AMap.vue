@@ -28,40 +28,18 @@ export default {
   watch: {
     points(value) {
       const points = []
-      const promises = []
       value.forEach(point => {
         if (point.location) {
           points.push({ id: point.id, lnglat: [point.location.lng, point.location.lat] })
         } else {
-          promises.push(this.searchPoint(point))
+          console.log(point.id, point.name)
         }
       })
 
-      Promise.all(promises)
-          .then(resList => {
-            const resPoints = resList.map(res => {
-              return { id: res.id, lnglat: [res.location.lng, res.location.lat] }
-            })
-
-            if (this.cluster) {
-              this.cluster.setMap(null);
-            }
-            this.cluster = new this.AMap.MarkerCluster(this.map, [points, ...resPoints], { gridSize: 60 });
-          })
-
-      // const points = value.map(point => {
-      //   if (point.location) {
-      //     return { id: point.id, lnglat: [point.location.lng, point.location.lat] }
-      //   } else {
-      //     let data = {}
-      //     this.searchPoint(point.name, (res) => {
-      //       data.id = res.id;
-      //       data.lnglat = [res.location.lng, res.location.lat]
-      //     })
-      //     return data
-      //   }
-      // })
-
+      if (this.cluster) {
+        this.cluster.setMap(null);
+      }
+      this.cluster = new this.AMap.MarkerCluster(this.map, points, { gridSize: 60 });
     }
   },
   methods: {

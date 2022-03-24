@@ -1,6 +1,8 @@
 <template>
-  <el-tree node-key="id" show-checkbox :data="treeData" :props="defaultProps" class="peoples-tree"
-           @check="handleCheck">
+  <el-tree node-key="id" show-checkbox :data="treeData" :props="defaultProps" class="peoples-tree" v-loading="loading"
+           @check="handleCheck"
+           @node-click="handleClick"
+  >
      <span :class="{invalid: node.level === 3 && !data.location}" slot-scope="{ node, data }">
        {{ data.label }}
      </span>
@@ -26,6 +28,10 @@ export default {
         return []
       }
     },
+    loading: {
+      type: Boolean,
+      default: false
+    }
   },
   computed: {
     treeData() {
@@ -71,6 +77,9 @@ export default {
     handleCheck(e, { checkedNodes }) {
       const nodes = checkedNodes.filter(node => !node.children)
       this.$emit('change', nodes)
+    },
+    handleClick(data, node) {
+      console.log(data, node)
     }
   },
 }
