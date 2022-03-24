@@ -1,7 +1,8 @@
 <template>
   <div id="app" class="app">
-    <peoples-tree class="app__tree" :peoples="peoples" @change="handleChange" :loading="loading"/>
-    <a-map class="app__map" :points="points"/>
+    <peoples-tree class="app__tree" :peoples="peoples" @change="handleChange" :loading="loading"
+                  @click="handleNodeClick"/>
+    <a-map class="app__map" :points="points" ref="map"/>
   </div>
 </template>
 
@@ -64,6 +65,11 @@ export default {
     },
     handleChange(data) {
       this.points = data
+    },
+    handleNodeClick(data) {
+      const json = JSON.stringify({ district: data.district, name: data.name, origin: data.origin, location: data.location, accurate: 2 })
+      console.log(json)
+      this.$refs.map.setCenter(data)
     },
     searchPoint(people, index, keywords) {
       const autoOptions = {

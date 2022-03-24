@@ -90,8 +90,10 @@ export default {
       const nodes = checkedNodes.filter(node => !node.children)
       this.$emit('change', nodes)
     },
-    handleClick(data, node) {
-      console.log(data, node)
+    handleClick(data) {
+      if (data.location) {
+        this.$emit('click', data)
+      }
     }
   },
 }
@@ -110,9 +112,11 @@ export default {
   .accurate0 {
     color: #F56C6C
   }
+
   .accurate1 {
     color: #E6A23C
   }
+
   .accurate2 {
     color: #67C23A
   }

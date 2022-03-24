@@ -84,13 +84,8 @@ export default {
         })
       })
     },
-    updateCluster() {
-      if (this.cluster) {
-        this.cluster.setMap(null);
-      }
-      this.cluster = new this.AMap.MarkerCluster(this.map, [
-        { lnglat: ['118.107244', '39.651315'] },
-      ], { gridSize: 60 });
+    setCenter({ location }) {
+      this.map.setZoomAndCenter(17, [location.lng, location.lat], true)
     }
   },
 }
