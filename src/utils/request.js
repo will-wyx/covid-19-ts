@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-    timeout: 3000
+    timeout: 300000
 });
 
 export default instance
