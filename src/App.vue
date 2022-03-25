@@ -42,11 +42,16 @@ export default {
       request.get('data/data.json')
           .then(({ data }) => {
             const promises = []
-            data.peoples.forEach(people => {
-              people.track.forEach((pos, i) => {
+            const { peoples, positions } = data
+            peoples.forEach(people => {
+              people.track = people.track.map((pos, i) => {
+                if (typeof (pos) === 'number') {
+                  return positions.find(p => p.id === pos)
+                }
                 if (!pos.location) {
                   promises.push(this.searchPoint(people, i, pos))
                 }
+                return pos
               })
             })
 
@@ -67,7 +72,13 @@ export default {
       this.points = data
     },
     handleNodeClick(data) {
-      const json = JSON.stringify({ district: data.district, name: data.name, origin: data.origin, location: data.location, accurate: 2 })
+      const json = JSON.stringify({
+        district: data.district,
+        name: data.name,
+        origin: data.origin,
+        location: data.location,
+        accurate: 2
+      })
       console.log(json)
       this.$refs.map.setCenter(data)
     },
