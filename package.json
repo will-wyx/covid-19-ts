@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "pub": "git subtree push --prefix dist origin gh-pages"
+    "pubgh": "git subtree push --prefix dist origin gh-pages",
+    "pub": "rsync -rvz --progress dist/ mallts:/usr/share/nginx/covid/."
   },
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",
