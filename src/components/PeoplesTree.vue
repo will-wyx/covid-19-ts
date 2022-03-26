@@ -1,6 +1,7 @@
 <template>
   <el-tree
       node-key="id"
+      ref="tree"
       :default-expanded-keys="expanded"
       show-checkbox
       :data="treeData"
@@ -9,6 +10,7 @@
       v-loading="loading"
       @check="handleCheck"
       @node-click="handleClick"
+      @node-contextmenu="handleContextmenu"
   >
      <span
          class="peoples-tree__label"
@@ -31,7 +33,8 @@ export default {
       defaultProps: {
         label: 'label',
         children: 'children'
-      }
+      },
+      rid: 0
     }
   },
   props: {
@@ -50,6 +53,10 @@ export default {
       default: () => {
         return []
       }
+    },
+    maxIndex: {
+      type: Number,
+      default: 0
     }
   },
   computed: {
@@ -66,7 +73,7 @@ export default {
         }
 
         const children = people.track.map((e) => {
-          return {label: e.origin || e.name, ...e}
+          return { label: e.origin || e.name, ...e }
         })
 
         list.push({
@@ -81,13 +88,18 @@ export default {
       wData.sort((a, b) => a.no - b.no)
 
       return [
-        {id: 'q', label: `确诊 [${qData.length}]`, children: qData},
-        {id: 'w', label: `无症状 [${wData.length}]`, children: wData},
+        { id: 'q', label: `确诊 [${qData.length}]`, children: qData },
+        { id: 'w', label: `无症状 [${wData.length}]`, children: wData },
       ]
     }
   },
+  watch: {
+    maxIndex(value) {
+      this.rid = value
+    }
+  },
   methods: {
-    handleCheck(e, {checkedNodes}) {
+    handleCheck(e, { checkedNodes }) {
       const nodes = checkedNodes.filter(node => !node.children)
       this.$emit('change', nodes)
     },
@@ -95,6 +107,28 @@ export default {
       if (data.location) {
         this.$emit('click', data)
       }
+    },
+    handleContextmenu(e, data) {
+      if (data.location) {
+        const json = JSON.stringify({
+          rid: ++this.rid,
+          district: data.district,
+          name: data.name,
+          location: data.location
+        })
+        console.log(json)
+      }
+    },
+    checkAreas(areas) {
+      const keys = []
+      this.peoples.forEach(people => {
+        if (areas.some(area => area === people.area))
+          keys.push(people.id)
+      })
+      const tree = this.$refs.tree
+      tree.setCheckedKeys(keys)
+      const checkedNodes = tree.getCheckedNodes()
+      this.handleCheck(null, { checkedNodes })
     }
   },
 }

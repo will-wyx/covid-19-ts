@@ -2,13 +2,26 @@
   <div id="app" class="app">
     <peoples-tree
         class="app__tree"
+        ref="tree"
         :peoples="peoples"
         :expanded="expanded"
         :loading="loading"
+        :max-index="maxIndex"
         @change="handleChange"
         @click="handleNodeClick"
     />
-    <a-map class="app__map" :points="points" ref="map" @click="handleMarkerClick"/>
+    <div class="app__main">
+      <div class="app__filter">
+        <el-checkbox
+            v-for="(area, i) of areas"
+            :key="i"
+            v-model="area.checked"
+            @change="handleAreaChange"
+        >{{ area.label }}({{area.count}})
+        </el-checkbox>
+      </div>
+      <a-map class="app__map" :points="points" ref="map" @click="handleMarkerClick"/>
+    </div>
   </div>
 </template>
 
@@ -29,7 +42,8 @@ export default {
       AMap: null,
       loading: false,
       expanded: [],
-      maxIndex: 0
+      maxIndex: 0,
+      areas: []
     }
   },
   created() {
@@ -54,6 +68,12 @@ export default {
               return a.rid > b.rid ? a.rid : b.rid
             })
             const peoples = data.peoples.map(people => {
+              const area = this.areas.find(a => a.label === people.area)
+              if (!area) {
+                this.areas.push({ label: people.area, checked: false, count: 1 })
+              } else {
+                area.count++
+              }
               const track = people.track.map((pos, index) => {
                 let item
                 if (pos.rid) {
@@ -89,17 +109,19 @@ export default {
       this.points = data
     },
     handleNodeClick(data) {
-      const json = JSON.stringify({
-        rid: ++this.maxIndex,
-        district: data.district,
-        name: data.name,
-        location: data.location
-      })
-      console.log(json)
       this.$refs.map.setCenter(data)
     },
     handleMarkerClick(data) {
       this.expanded = [data.id.slice(0, 5)]
+    },
+    handleAreaChange() {
+      let areas = []
+      this.areas.forEach(area => {
+        if (area.checked) {
+          areas.push(area.label)
+        }
+      })
+      this.$refs.tree.checkAreas(areas)
     },
     searchPoint(data) {
       const autoOptions = {
@@ -144,15 +166,29 @@ html, body, .app {
 
 .app {
   display: flex;
+  $app: &;
 
   &__tree {
-    width: 23rem;
+    width: 20%;
     padding: .5rem;
+    background-color: #efefef;
   }
 
-  &__map {
+  &__main {
     flex: 1;
     overflow: hidden;
+
+    #{$app + '__filter'} {
+      padding: 2px 4px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #{$app + '__map'} {
+      flex: 1;
+      overflow: hidden;
+    }
   }
+
 }
 </style>
