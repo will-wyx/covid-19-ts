@@ -51,12 +51,13 @@ export default {
             const promises = []
             const peoples = data.peoples.map(people => {
               const track = people.track.map((pos, index) => {
-                let item = {}
+                let item
                 if (pos.rid) {
                   item = {...pos, ...data.positions.find(p => p.rid === pos.rid)}
                 } else {
-                  item = {...pos, accurate: 1}
-                  promises.push(this.searchPoint(item))
+                  item = {...pos}
+                  if (pos.accurate !== 0)
+                    promises.push(this.searchPoint(item))
                 }
                 item.id = `${people.id}-${index}`
                 return item
@@ -70,6 +71,7 @@ export default {
                     data.district = pos.district
                     data.name = pos.name
                     data.location = pos.location
+                    data.accurate = pos.accurate
                   })
                   this.peoples = peoples
                   this.loading = false
@@ -109,10 +111,13 @@ export default {
                 district, name, location: {
                   lng: location.lng,
                   lat: location.lat,
-                }
+                },
+                accurate: 1
               }
             } else {
-              pos = {}
+              pos = {
+                accurate: 0
+              }
             }
             resolve({data, pos})
           } else {

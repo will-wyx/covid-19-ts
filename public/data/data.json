@@ -1,48 +1,6 @@
 {
   "peoples": [
     {
-      "id": "W0003",
-      "date": "20",
-      "area": "海港区",
-      "track": [
-        {
-          "rid": 1,
-          "origin": "红卫里社区",
-          "accurate": 2
-        },
-        {
-          "rid": 2,
-          "origin": "秦皇岛市海阳农副产品批发市场",
-          "accurate": 2
-        },
-        {
-          "rid": 3,
-          "origin": "秦皇岛市奥星食品有限公司",
-          "accurate": 2
-        },
-        {
-          "rid": 4,
-          "origin": "河北宏都实业集团",
-          "accurate": 2
-        },
-        {
-          "rid": 5,
-          "origin": "南戴河临时便民市场",
-          "accurate": 2
-        },
-        {
-          "rid": 6,
-          "origin": "汇鑫速冻食品有限公司",
-          "accurate": 2
-        },
-        {
-          "rid": 7,
-          "origin": "盛华世家商业广场农贸水产综合批发市场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
       "id": "Q0001",
       "date": "19",
       "area": "高新区",
@@ -93,471 +51,6 @@
         {
           "rid": 15,
           "origin": "高新区朝阳医院",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "Q0014",
-      "date": "21",
-      "area": "高新区",
-      "track": [
-        {
-          "rid": 55,
-          "origin": "三益庄村",
-          "accurate": 2
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0004",
-      "date": "21",
-      "area": "高新区",
-      "track": [
-        {
-          "rid": 74,
-          "origin": "高新老庄子镇锦绣花园小区",
-          "accurate": 2
-        },
-        {
-          "rid": 75,
-          "origin": "詹官屯村",
-          "accurate": 2
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        },
-        {
-          "rid": 76,
-          "origin": "宋各庄村",
-          "accurate": 2
-        },
-        {
-          "rid": 77,
-          "origin": "路南新街",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0005",
-      "date": "21",
-      "area": "高新区",
-      "track": [
-        {
-          "rid": 75,
-          "origin": "詹官屯村",
-          "accurate": 2
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        },
-        {
-          "origin": "老庄子村赵宇牙科诊所"
-        }
-      ]
-    },
-    {
-      "id": "W0006",
-      "date": "21",
-      "area": "高新区",
-      "track": [
-        {
-          "rid": 78,
-          "origin": "高新党家庄村",
-          "accurate": 2
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        },
-        {
-          "origin": "中国建设银行(唐山高新技术开发区支行)"
-        },
-        {
-          "rid": 79,
-          "origin": "保定市安新县端村镇大淀头村",
-          "accurate": 2
-        },
-        {
-          "rid": 80,
-          "origin": "安新县医院",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0008",
-      "date": "21",
-      "area": "高新区",
-      "track": [
-        {
-          "rid": 82,
-          "origin": "承德市围场县三义永乡二地村",
-          "accurate": 2
-        },
-        {
-          "origin": "高新盛华公寓"
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0010",
-      "date": "21",
-      "area": "高新区",
-      "track": [
-        {
-          "origin": "高新毛家坨三村"
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0016",
-      "date": "21",
-      "area": "高新区",
-      "track": [
-        {
-          "origin": "高新盛华公寓"
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        },
-        {
-          "origin": "路北钓鱼台"
-        },
-        {
-          "rid": 94,
-          "origin": "丰南通达韩国城",
-          "accurate": 2
-        },
-        {
-          "rid": 95,
-          "origin": "山东省滨州市沾化区鲁北海产批发市场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0024",
-      "date": "21",
-      "area": "高新区",
-      "track": [
-        {
-          "rid": 117,
-          "origin": "恒大学庭小区",
-          "accurate": 2
-        },
-        {
-          "origin": "谊品生鲜超市"
-        },
-        {
-          "rid": 50,
-          "origin": "唐钢国际工程技术股份有限公司",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0038",
-      "date": "21",
-      "area": "高新区",
-      "track": [
-        {
-          "rid": 10,
-          "origin": "佳华煤化工有限公司",
-          "accurate": 2
-        },
-        {
-          "rid": 152,
-          "origin": "俏巴妹烤鱼",
-          "accurate": 2
-        },
-        {
-          "rid": 153,
-          "origin": "鑫丰大酒店",
-          "accurate": 2
-        },
-        {
-          "origin": "高新龙华小区"
-        },
-        {
-          "rid": 154,
-          "origin": "乐亭唐钢新区",
-          "accurate": 2
-        },
-        {
-          "rid": 155,
-          "origin": "渔景海鲜楼",
-          "accurate": 2
-        },
-        {
-          "rid": 156,
-          "origin": "路北龙泉西里小区",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0039",
-      "date": "21",
-      "area": "高新区",
-      "track": [
-        {
-          "rid": 157,
-          "origin": "路北红星楼市场",
-          "accurate": 2
-        },
-        {
-          "rid": 105,
-          "origin": "爱琴海",
-          "accurate": 2
-        },
-        {
-          "rid": 158,
-          "origin": "八方购物广场",
-          "accurate": 2
-        },
-        {
-          "rid": 159,
-          "origin": "星河湾小区",
-          "accurate": 2
-        },
-        {
-          "rid": 8,
-          "origin": "远洋城",
-          "accurate": 2
-        },
-        {
-          "rid": 160,
-          "origin": "人民购物广场",
-          "accurate": 2
-        },
-        {
-          "rid": 161,
-          "origin": "古冶林西东工房",
-          "accurate": 2
-        },
-        {
-          "rid": 162,
-          "origin": "林西百货大楼",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0042",
-      "date": "21",
-      "area": "高新区",
-      "track": [
-        {
-          "rid": 171,
-          "origin": "高新老庄子镇小城子村",
-          "accurate": 2
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        },
-        {
-          "rid": 172,
-          "origin": "瓦房庄村",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0043",
-      "date": "21",
-      "area": "高新区",
-      "track": [
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        },
-        {
-          "origin": "詹官屯大众浴池"
-        },
-        {
-          "rid": 173,
-          "origin": "魏庄子村委会",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0060",
-      "date": "22",
-      "area": "高新区",
-      "track": [
-        {
-          "rid": 78,
-          "origin": "高新党家庄村",
-          "accurate": 2
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        },
-        {
-          "rid": 224,
-          "origin": "娘娘庙村道口菜鸟驿站",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0061",
-      "date": "22",
-      "area": "高新区",
-      "track": [
-        {
-          "rid": 78,
-          "origin": "高新党家庄村",
-          "accurate": 2
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        },
-        {
-          "rid": 225,
-          "origin": "路南宝岛医院",
-          "accurate": 2
-        },
-        {
-          "rid": 79,
-          "origin": "保定市安新县端村镇大淀头村",
-          "accurate": 2
-        },
-        {
-          "rid": 80,
-          "origin": "安新县医院",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0062",
-      "date": "22",
-      "area": "高新区",
-      "track": [
-        {
-          "rid": 226,
-          "origin": "高新瓦官庄村",
-          "accurate": 2
-        },
-        {
-          "origin": "娘娘庙村欢乐超市"
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        },
-        {
-          "rid": 104,
-          "origin": "吾悦广场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0063",
-      "date": "22",
-      "area": "高新区",
-      "track": [
-        {
-          "origin": "高新盛华公寓"
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        },
-        {
-          "rid": 227,
-          "origin": "滦州安各庄镇西安各庄村",
-          "accurate": 2
-        },
-        {
-          "origin": "胜利路菜市场"
-        }
-      ]
-    },
-    {
-      "id": "W0064",
-      "date": "22",
-      "area": "高新区",
-      "track": [
-        {
-          "rid": 228,
-          "origin": "吉庆里小区",
-          "accurate": 2
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0065",
-      "date": "22",
-      "area": "高新区",
-      "track": [
-        {
-          "rid": 228,
-          "origin": "吉庆里小区",
-          "accurate": 2
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        },
-        {
-          "origin": "庆翠堂头疗养生会馆"
-        },
-        {
-          "rid": 229,
-          "origin": "滦州卧龙山庄小区",
-          "accurate": 2
-        },
-        {
-          "rid": 230,
-          "origin": "大横山营村",
-          "accurate": 2
-        },
-        {
-          "rid": 231,
-          "origin": "滦河大酒店",
           "accurate": 2
         }
       ]
@@ -670,6 +163,229 @@
       ]
     },
     {
+      "id": "Q0005",
+      "date": "19",
+      "area": "古冶区",
+      "track": [
+        {
+          "rid": 12,
+          "origin": "古冶区唐钢胜利小区",
+          "accurate": 2
+        },
+        {
+          "rid": 16,
+          "origin": "中国农业银行(唐山古冶车站分理处)",
+          "accurate": 2
+        },
+        {
+          "rid": 17,
+          "origin": "中国邮政储蓄银行(西新楼支行)",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "Q0006",
+      "date": "19",
+      "area": "开平区",
+      "track": [
+        {
+          "origin": "税钢社区"
+        },
+        {
+          "origin": "税钢小区早市"
+        },
+        {
+          "rid": 18,
+          "origin": "税钢小学",
+          "accurate": 2
+        },
+        {
+          "rid": 12,
+          "origin": "古冶区唐钢胜利小区",
+          "accurate": 2
+        },
+        {
+          "rid": 13,
+          "origin": "美乐饭店",
+          "accurate": 2
+        },
+        {
+          "rid": 19,
+          "origin": "开平区殡仪馆",
+          "accurate": 2
+        },
+        {
+          "origin": "唐客隆澡堂"
+        }
+      ]
+    },
+    {
+      "id": "Q0007",
+      "date": "19",
+      "area": "开平区",
+      "track": [
+        {
+          "rid": 20,
+          "origin": "朝新楼",
+          "accurate": 2
+        },
+        {
+          "rid": 21,
+          "origin": "唐山利满商贸",
+          "accurate": 2
+        },
+        {
+          "rid": 12,
+          "origin": "古冶区唐钢胜利小区",
+          "accurate": 2
+        },
+        {
+          "rid": 23,
+          "origin": "荣盛道华莱士",
+          "accurate": 2
+        },
+        {
+          "rid": 24,
+          "origin": "路南区税务局",
+          "accurate": 2
+        },
+        {
+          "rid": 25,
+          "origin": "小惠女装工厂店",
+          "accurate": 2
+        },
+        {
+          "rid": 22,
+          "origin": "新华超市",
+          "accurate": 2
+        },
+        {
+          "rid": 30,
+          "origin": "京华生活区",
+          "accurate": 2
+        },
+        {
+          "rid": 26,
+          "origin": "新城道口彦东商店",
+          "accurate": 2
+        },
+        {
+          "rid": 27,
+          "origin": "西新苑市场",
+          "accurate": 2
+        },
+        {
+          "rid": 28,
+          "origin": "唐山农业银行开平支行",
+          "accurate": 2
+        },
+        {
+          "rid": 398,
+          "origin": "开平区政府北门黄艾炙店",
+          "accurate": 1
+        },
+        {
+          "origin": "西新苑朝新诊所"
+        },
+        {
+          "rid": 29,
+          "origin": "康之家药店",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "Q0008",
+      "date": "20",
+      "area": "丰润区",
+      "track": [
+        {
+          "rid": 31,
+          "origin": "丰润石各庄镇女过庄村",
+          "accurate": 2
+        },
+        {
+          "rid": 32,
+          "origin": "丰润早市",
+          "accurate": 2
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        },
+        {
+          "rid": 34,
+          "origin": "老庄子镇曼迪超市（原金客隆超市）及斜对面鸭货熟食店",
+          "accurate": 2
+        },
+        {
+          "rid": 33,
+          "origin": "三女河村菜鸟驿站",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "Q0009",
+      "date": "20",
+      "area": "丰润区",
+      "track": [
+        {
+          "rid": 35,
+          "origin": "丰润开尔尚城小区",
+          "accurate": 2
+        },
+        {
+          "rid": 36,
+          "origin": "浭阳雅园智慧托管",
+          "accurate": 2
+        },
+        {
+          "rid": 37,
+          "origin": "浭阳锦园小区",
+          "accurate": 2
+        },
+        {
+          "rid": 38,
+          "origin": "晨坤文体办公用品店",
+          "accurate": 2
+        },
+        {
+          "rid": 39,
+          "origin": "高新沙雾庄村",
+          "accurate": 2
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        },
+        {
+          "rid": 40,
+          "origin": "老庄子银龙加油站",
+          "accurate": 2
+        },
+        {
+          "origin": "老庄子镇十字街"
+        },
+        {
+          "origin": "开越路比亚迪和吉利汽车4S店"
+        },
+        {
+          "rid": 42,
+          "origin": "唐丰路长安汽车4S店",
+          "accurate": 2
+        },
+        {
+          "rid": 41,
+          "origin": "大庆道奇瑞汽车4S店",
+          "accurate": 2
+        }
+      ]
+    },
+    {
       "id": "Q0010",
       "date": "21",
       "area": "路北区",
@@ -720,6 +436,550 @@
       ]
     },
     {
+      "id": "Q0011",
+      "date": "21",
+      "area": "丰润区",
+      "track": [
+        {
+          "rid": 31,
+          "origin": "丰润石各庄镇女过庄村",
+          "accurate": 2
+        },
+        {
+          "rid": 32,
+          "origin": "丰润早市",
+          "accurate": 2
+        },
+        {
+          "rid": 34,
+          "origin": "老庄子镇曼迪超市（原金客隆超市）及斜对面鸭货熟食店",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "Q0012",
+      "date": "21",
+      "area": "丰润区",
+      "track": [
+        {
+          "rid": 31,
+          "origin": "丰润石各庄镇女过庄村",
+          "accurate": 2
+        },
+        {
+          "rid": 32,
+          "origin": "丰润早市",
+          "accurate": 2
+        },
+        {
+          "rid": 34,
+          "origin": "老庄子镇曼迪超市（原金客隆超市）及斜对面鸭货熟食店",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "Q0013",
+      "date": "21",
+      "area": "开平区",
+      "track": [
+        {
+          "rid": 52,
+          "origin": "马家沟启明星幼儿园",
+          "accurate": 2
+        },
+        {
+          "origin": "志方超市"
+        },
+        {
+          "rid": 53,
+          "origin": "前陡河村",
+          "accurate": 2
+        },
+        {
+          "rid": 54,
+          "origin": "弘慈医院",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "Q0014",
+      "date": "21",
+      "area": "高新区",
+      "track": [
+        {
+          "rid": 55,
+          "origin": "三益庄村",
+          "accurate": 2
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "Q0015",
+      "date": "22",
+      "area": "丰润区",
+      "track": [
+        {
+          "rid": 56,
+          "origin": "丰润银铺乡前贾庄村",
+          "accurate": 2
+        },
+        {
+          "rid": 57,
+          "origin": "福慧超市",
+          "accurate": 2
+        },
+        {
+          "rid": 52,
+          "origin": "马家沟启明星幼儿园",
+          "accurate": 2
+        },
+        {
+          "origin": "丝潮理发馆"
+        },
+        {
+          "origin": "顺达广告公司"
+        },
+        {
+          "rid": 58,
+          "origin": "供销加油站",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "Q0016",
+      "date": 23,
+      "area": "路北区",
+      "track": [
+        {
+          "rid": 59,
+          "origin": "路北金港国际静园小区",
+          "accurate": 2
+        },
+        {
+          "rid": 60,
+          "origin": "路北妇幼保健院",
+          "accurate": 2
+        },
+        {
+          "rid": 61,
+          "origin": "路北区疾控中心",
+          "accurate": 2
+        },
+        {
+          "rid": 62,
+          "origin": "家悦宾馆",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0001",
+      "date": "20",
+      "area": "玉田县",
+      "track": [
+        {
+          "rid": 63,
+          "origin": "玉田虹桥镇珠树坞三村",
+          "accurate": 2
+        },
+        {
+          "rid": 64,
+          "origin": "二郎庙市场",
+          "accurate": 2
+        },
+        {
+          "rid": 65,
+          "origin": "金玉市场",
+          "accurate": 2
+        },
+        {
+          "origin": "鸦鸿桥镇双双超市旁某饺子馆"
+        },
+        {
+          "rid": 66,
+          "origin": "虹桥镇中学（未进校）",
+          "accurate": 2
+        },
+        {
+          "origin": "南环路核酸检测点等"
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        },
+        {
+          "rid": 67,
+          "origin": "路北君瑞市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0002",
+      "date": "20",
+      "area": "路南区",
+      "track": [
+        {
+          "origin": "路南鑫坤冷库"
+        },
+        {
+          "origin": "老胡新天地卤肉饭馆"
+        },
+        {
+          "rid": 68,
+          "origin": "华盛超市（新华道店）",
+          "accurate": 2
+        },
+        {
+          "rid": 69,
+          "origin": "四海制冷（永红桥附近）",
+          "accurate": 2
+        },
+        {
+          "rid": 70,
+          "origin": "南湖医院",
+          "accurate": 2
+        },
+        {
+          "rid": 71,
+          "origin": "路南市场监督管理局永红桥分局",
+          "accurate": 2
+        },
+        {
+          "rid": 73,
+          "origin": "河间驴肉火烧(新天地店)",
+          "accurate": 2
+        },
+        {
+          "rid": 72,
+          "origin": "吉祥彩钢",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0003",
+      "date": "20",
+      "area": "海港区",
+      "track": [
+        {
+          "rid": 1,
+          "origin": "红卫里社区",
+          "accurate": 2
+        },
+        {
+          "rid": 2,
+          "origin": "秦皇岛市海阳农副产品批发市场",
+          "accurate": 2
+        },
+        {
+          "rid": 3,
+          "origin": "秦皇岛市奥星食品有限公司",
+          "accurate": 2
+        },
+        {
+          "rid": 4,
+          "origin": "河北宏都实业集团",
+          "accurate": 2
+        },
+        {
+          "rid": 5,
+          "origin": "南戴河临时便民市场",
+          "accurate": 2
+        },
+        {
+          "rid": 6,
+          "origin": "汇鑫速冻食品有限公司",
+          "accurate": 2
+        },
+        {
+          "rid": 7,
+          "origin": "盛华世家商业广场农贸水产综合批发市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0004",
+      "date": "21",
+      "area": "高新区",
+      "track": [
+        {
+          "rid": 74,
+          "origin": "高新老庄子镇锦绣花园小区",
+          "accurate": 2
+        },
+        {
+          "rid": 75,
+          "origin": "詹官屯村",
+          "accurate": 2
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        },
+        {
+          "rid": 76,
+          "origin": "宋各庄村",
+          "accurate": 2
+        },
+        {
+          "rid": 77,
+          "origin": "路南新街",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0005",
+      "date": "21",
+      "area": "高新区",
+      "track": [
+        {
+          "rid": 75,
+          "origin": "詹官屯村",
+          "accurate": 2
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        },
+        {
+          "origin": "老庄子村赵宇牙科诊所"
+        }
+      ]
+    },
+    {
+      "id": "W0006",
+      "date": "21",
+      "area": "高新区",
+      "track": [
+        {
+          "rid": 78,
+          "origin": "高新党家庄村",
+          "accurate": 2
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        },
+        {
+          "origin": "中国建设银行(唐山高新技术开发区支行)"
+        },
+        {
+          "rid": 79,
+          "origin": "保定市安新县端村镇大淀头村",
+          "accurate": 2
+        },
+        {
+          "rid": 80,
+          "origin": "安新县医院",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0007",
+      "date": "21",
+      "area": "丰南区",
+      "track": [
+        {
+          "rid": 81,
+          "origin": "丰南岔河金河小区",
+          "accurate": 2
+        },
+        {
+          "origin": "张庄子村口北侧饭店"
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0008",
+      "date": "21",
+      "area": "高新区",
+      "track": [
+        {
+          "rid": 82,
+          "origin": "承德市围场县三义永乡二地村",
+          "accurate": 2
+        },
+        {
+          "origin": "高新盛华公寓"
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0009",
+      "date": "21",
+      "area": "开平区",
+      "track": [
+        {
+          "rid": 83,
+          "origin": "紫荆花苑小区",
+          "accurate": 2
+        },
+        {
+          "rid": 52,
+          "origin": "马家沟启明星幼儿园",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0010",
+      "date": "21",
+      "area": "高新区",
+      "track": [
+        {
+          "origin": "高新毛家坨三村"
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0011",
+      "date": "21",
+      "area": "开平区",
+      "track": [
+        {
+          "origin": "开平越河镇小营村"
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0012",
+      "date": "21",
+      "area": "开平区",
+      "track": [
+        {
+          "rid": 52,
+          "origin": "马家沟启明星幼儿园",
+          "accurate": 2
+        },
+        {
+          "rid": 83,
+          "origin": "紫荆花苑小区",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0013",
+      "date": "21",
+      "area": "开平区",
+      "track": [
+        {
+          "rid": 83,
+          "origin": "紫荆花苑小区",
+          "accurate": 2
+        },
+        {
+          "origin": "程程理发店"
+        },
+        {
+          "rid": 84,
+          "origin": "马家沟市场",
+          "accurate": 2
+        },
+        {
+          "rid": 87,
+          "origin": "烈火蛋糕(唐马路店)",
+          "accurate": 2
+        },
+        {
+          "rid": 85,
+          "origin": "唐泰生鲜超市",
+          "accurate": 2
+        },
+        {
+          "rid": 88,
+          "origin": "骨里香熟食(马陡路店)",
+          "accurate": 2
+        },
+        {
+          "rid": 86,
+          "origin": "德寿堂传统中医诊所",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0014",
+      "date": "21",
+      "area": "丰润区",
+      "track": [
+        {
+          "rid": 89,
+          "origin": "丰润常庄村",
+          "accurate": 2
+        },
+        {
+          "origin": "城西王家楼市场"
+        },
+        {
+          "rid": 90,
+          "origin": "六小区",
+          "accurate": 2
+        },
+        {
+          "origin": "新军屯集"
+        },
+        {
+          "origin": "白各庄集"
+        },
+        {
+          "rid": 91,
+          "origin": "恒金仓储冷库",
+          "accurate": 2
+        },
+        {
+          "rid": 92,
+          "origin": "太平路街道办事处",
+          "accurate": 2
+        },
+        {
+          "origin": "中泰加油站"
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
       "id": "W0015",
       "date": "21",
       "area": "路北区",
@@ -732,6 +992,120 @@
         {
           "rid": 11,
           "origin": "盛华市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0016",
+      "date": "21",
+      "area": "高新区",
+      "track": [
+        {
+          "origin": "高新盛华公寓"
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        },
+        {
+          "origin": "路北钓鱼台"
+        },
+        {
+          "rid": 94,
+          "origin": "丰南通达韩国城",
+          "accurate": 2
+        },
+        {
+          "rid": 95,
+          "origin": "山东省滨州市沾化区鲁北海产批发市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0017",
+      "date": "21",
+      "area": "开平区",
+      "track": [
+        {
+          "rid": 96,
+          "origin": "开平马家沟",
+          "accurate": 2
+        },
+        {
+          "rid": 52,
+          "origin": "马家沟启明星幼儿园",
+          "accurate": 2
+        },
+        {
+          "origin": "开平美食街"
+        },
+        {
+          "origin": "马家沟工商银行"
+        },
+        {
+          "rid": 97,
+          "origin": "光华楼小区",
+          "accurate": 2
+        },
+        {
+          "origin": "马家沟后屯大集"
+        },
+        {
+          "rid": 98,
+          "origin": "丰润静园永和超市",
+          "accurate": 2
+        },
+        {
+          "origin": "南关"
+        },
+        {
+          "origin": "北关唐人医药"
+        },
+        {
+          "rid": 99,
+          "origin": "滦州郭庄村",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0018",
+      "date": "21",
+      "area": "路南区",
+      "track": [
+        {
+          "rid": 100,
+          "origin": "唐山火车站",
+          "accurate": 2
+        },
+        {
+          "rid": 101,
+          "origin": "山东省滨州市无棣县车王镇李什村",
+          "accurate": 2
+        },
+        {
+          "rid": 194,
+          "origin": "中红鲜鸡冷冻厂（唐柏路附近）",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0019",
+      "date": "21",
+      "area": "路南区",
+      "track": [
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        },
+        {
+          "rid": 102,
+          "origin": "路南兴泰里小区",
           "accurate": 2
         }
       ]
@@ -789,6 +1163,21 @@
       ]
     },
     {
+      "id": "W0021",
+      "date": "21",
+      "area": "路南区",
+      "track": [
+        {
+          "origin": "路南景荣社区"
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
       "id": "W0022",
       "date": "21",
       "area": "路北区",
@@ -822,87 +1211,121 @@
       ]
     },
     {
-      "id": "W0031",
+      "id": "W0023",
       "date": "21",
-      "area": "路北区",
+      "area": "古冶区",
       "track": [
         {
-          "origin": "吾悦广场步行街"
-        },
-        {
-          "rid": 137,
-          "origin": "华岩路八方超市",
+          "rid": 113,
+          "origin": "赵各庄第三小学",
           "accurate": 2
         },
         {
-          "origin": "缇香小区底商“鲁大侠”饭店"
-        },
-        {
-          "rid": 138,
-          "origin": "曹妃甸枫华高中",
+          "rid": 114,
+          "origin": "圣鸿鲜花庆典",
           "accurate": 2
         },
         {
-          "rid": 139,
-          "origin": "路北怡景文园小区",
+          "rid": 115,
+          "origin": "古冶区中医院",
           "accurate": 2
         },
         {
-          "rid": 140,
-          "origin": "北新里小区",
-          "accurate": 2
-        },
-        {
-          "rid": 141,
-          "origin": "祥荣里小区",
-          "accurate": 2
-        },
-        {
-          "rid": 126,
-          "origin": "市第二医院",
-          "accurate": 2
-        },
-        {
-          "rid": 142,
-          "origin": "路南南湖公园",
+          "rid": 116,
+          "origin": "赵各庄融园小区",
           "accurate": 2
         }
       ]
     },
     {
-      "id": "W0035",
+      "id": "W0024",
       "date": "21",
-      "area": "路北区",
+      "area": "高新区",
       "track": [
         {
-          "origin": "嘉瑞超市"
-        },
-        {
-          "origin": "裕华道周家小厨"
-        },
-        {
-          "rid": 139,
-          "origin": "路北怡景文园小区",
+          "rid": 117,
+          "origin": "恒大学庭小区",
           "accurate": 2
         },
         {
-          "rid": 140,
-          "origin": "北新里小区",
+          "origin": "谊品生鲜超市"
+        },
+        {
+          "rid": 50,
+          "origin": "唐钢国际工程技术股份有限公司",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0025",
+      "date": "21",
+      "area": "开平区",
+      "track": [
+        {
+          "rid": 53,
+          "origin": "前陡河村",
           "accurate": 2
         },
         {
-          "rid": 141,
-          "origin": "祥荣里小区",
+          "rid": 118,
+          "origin": "屈庄大桥附近口口香烧烤",
           "accurate": 2
         },
         {
-          "rid": 126,
-          "origin": "市第二医院",
+          "origin": "志方超市"
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0026",
+      "date": "21",
+      "area": "路南区",
+      "track": [
+        {
+          "rid": 119,
+          "origin": "路南西大夫坨村",
           "accurate": 2
         },
         {
-          "rid": 142,
-          "origin": "路南南湖公园",
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0027",
+      "date": "21",
+      "area": "开平区",
+      "track": [
+        {
+          "origin": "陡河村"
+        },
+        {
+          "rid": 52,
+          "origin": "马家沟启明星幼儿园",
+          "accurate": 2
+        },
+        {
+          "origin": "刘官屯村北湿巾厂"
+        },
+        {
+          "rid": 120,
+          "origin": "马家沟唐人医药",
+          "accurate": 2
+        },
+        {
+          "origin": "志方购物"
+        },
+        {
+          "rid": 54,
+          "origin": "弘慈医院",
           "accurate": 2
         }
       ]
@@ -985,6 +1408,134 @@
       ]
     },
     {
+      "id": "W0029",
+      "date": "21",
+      "area": "路南区",
+      "track": [
+        {
+          "rid": 132,
+          "origin": "路南宋谢庄",
+          "accurate": 2
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0030",
+      "date": "21",
+      "area": "滦州市",
+      "track": [
+        {
+          "rid": 133,
+          "origin": "高新娘娘庙村",
+          "accurate": 2
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        },
+        {
+          "rid": 134,
+          "origin": "滦州九百户村",
+          "accurate": 2
+        },
+        {
+          "rid": 135,
+          "origin": "郝庄村",
+          "accurate": 2
+        },
+        {
+          "rid": 136,
+          "origin": "安家楼村",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0031",
+      "date": "21",
+      "area": "路北区",
+      "track": [
+        {
+          "origin": "吾悦广场步行街"
+        },
+        {
+          "rid": 137,
+          "origin": "华岩路八方超市",
+          "accurate": 2
+        },
+        {
+          "origin": "缇香小区底商“鲁大侠”饭店"
+        },
+        {
+          "rid": 138,
+          "origin": "曹妃甸枫华高中",
+          "accurate": 2
+        },
+        {
+          "rid": 139,
+          "origin": "路北怡景文园小区",
+          "accurate": 2
+        },
+        {
+          "rid": 140,
+          "origin": "北新里小区",
+          "accurate": 2
+        },
+        {
+          "rid": 141,
+          "origin": "祥荣里小区",
+          "accurate": 2
+        },
+        {
+          "rid": 126,
+          "origin": "市第二医院",
+          "accurate": 2
+        },
+        {
+          "rid": 142,
+          "origin": "路南南湖公园",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0032",
+      "date": "21",
+      "area": "古冶区",
+      "track": [
+        {
+          "origin": "古冶赵各庄矿劳动服务公司"
+        },
+        {
+          "origin": "赵各庄三村林西楼"
+        },
+        {
+          "rid": 143,
+          "origin": "马矿新区",
+          "accurate": 2
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        },
+        {
+          "rid": 144,
+          "origin": "古冶东华小区",
+          "accurate": 2
+        },
+        {
+          "origin": "美珍小火锅"
+        }
+      ]
+    },
+    {
       "id": "W0033",
       "date": "21",
       "area": "路北区",
@@ -1032,9 +1583,126 @@
       ]
     },
     {
-      "id": "W0044",
+      "id": "W0034",
+      "date": "21",
+      "area": "丰润区",
+      "track": [
+        {
+          "rid": 146,
+          "origin": "市游泳馆",
+          "accurate": 2
+        },
+        {
+          "rid": 35,
+          "origin": "丰润开尔尚城小区",
+          "accurate": 2
+        },
+        {
+          "rid": 147,
+          "origin": "左家坞村",
+          "accurate": 2
+        },
+        {
+          "rid": 148,
+          "origin": "西金桥双语学校",
+          "accurate": 2
+        },
+        {
+          "origin": "东方诊所"
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0035",
       "date": "21",
       "area": "路北区",
+      "track": [
+        {
+          "origin": "嘉瑞超市"
+        },
+        {
+          "origin": "裕华道周家小厨"
+        },
+        {
+          "rid": 139,
+          "origin": "路北怡景文园小区",
+          "accurate": 2
+        },
+        {
+          "rid": 140,
+          "origin": "北新里小区",
+          "accurate": 2
+        },
+        {
+          "rid": 141,
+          "origin": "祥荣里小区",
+          "accurate": 2
+        },
+        {
+          "rid": 126,
+          "origin": "市第二医院",
+          "accurate": 2
+        },
+        {
+          "rid": 142,
+          "origin": "路南南湖公园",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0036",
+      "date": "21",
+      "area": "开平区",
+      "track": [
+        {
+          "rid": 149,
+          "origin": "开平河联园B区",
+          "accurate": 2
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0037",
+      "date": "21",
+      "area": "迁西县",
+      "track": [
+        {
+          "rid": 150,
+          "origin": "迁西东荒峪镇下川村",
+          "accurate": 2
+        },
+        {
+          "rid": 151,
+          "origin": "浤源超市（韩庄中学附近）",
+          "accurate": 2
+        },
+        {
+          "rid": 67,
+          "origin": "路北君瑞市场",
+          "accurate": 2
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0038",
+      "date": "21",
+      "area": "高新区",
       "track": [
         {
           "rid": 10,
@@ -1042,351 +1710,78 @@
           "accurate": 2
         },
         {
-          "origin": "路北好又香熟食店"
-        },
-        {
-          "rid": 174,
-          "origin": "龙泽路红红木炭火锅店",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0054",
-      "date": "22",
-      "area": "路北区",
-      "track": [
-        {
-          "rid": 203,
-          "origin": "路北韩城镇万都国际小区",
+          "rid": 152,
+          "origin": "俏巴妹烤鱼",
           "accurate": 2
         },
         {
-          "rid": 204,
-          "origin": "韩城阳光超市",
+          "rid": 153,
+          "origin": "鑫丰大酒店",
           "accurate": 2
         },
         {
-          "rid": 205,
-          "origin": "利康医院",
+          "origin": "高新龙华小区"
+        },
+        {
+          "rid": 154,
+          "origin": "乐亭唐钢新区",
           "accurate": 2
         },
         {
-          "rid": 206,
-          "origin": "华北理工大学附属医院",
+          "rid": 155,
+          "origin": "渔景海鲜楼",
           "accurate": 2
         },
-        {
-          "rid": 207,
-          "origin": "爆肚辉饭店",
-          "accurate": 2
-        },
-        {
-          "origin": "“童真心语”幼儿园"
-        },
-        {
-          "rid": 208,
-          "origin": "丰润车管所第三分所",
-          "accurate": 2
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0055",
-      "date": "22",
-      "area": "路北区",
-      "track": [
-        {
-          "rid": 209,
-          "origin": "路北韩城镇左岸彩虹苑小区",
-          "accurate": 2
-        },
-        {
-          "rid": 210,
-          "origin": "超人影像",
-          "accurate": 2
-        },
-        {
-          "origin": "鼎盛食品超市"
-        },
-        {
-          "rid": 211,
-          "origin": "王氏拉面馆",
-          "accurate": 2
-        },
-        {
-          "rid": 212,
-          "origin": "乐顺堂药房",
-          "accurate": 2
-        },
-        {
-          "rid": 213,
-          "origin": "一米六零食店",
-          "accurate": 2
-        },
-        {
-          "origin": "随想仓超市"
-        },
-        {
-          "rid": 214,
-          "origin": "羊城小筑饭馆",
-          "accurate": 2
-        },
-        {
-          "rid": 215,
-          "origin": "滦南胡各庄镇忠武跆拳道馆",
-          "accurate": 2
-        },
-        {
-          "origin": "丰润DFK街舞"
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0056",
-      "date": "22",
-      "area": "路北区",
-      "track": [
-        {
-          "rid": 209,
-          "origin": "路北韩城镇左岸彩虹苑小区",
-          "accurate": 2
-        },
-        {
-          "rid": 216,
-          "origin": "神童艺术幼儿园",
-          "accurate": 2
-        },
-        {
-          "rid": 210,
-          "origin": "超人影像",
-          "accurate": 2
-        },
-        {
-          "rid": 214,
-          "origin": "羊城小筑饭馆",
-          "accurate": 2
-        },
-        {
-          "rid": 217,
-          "origin": "丰润北购商场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0057",
-      "date": "22",
-      "area": "路北区",
-      "track": [
         {
           "rid": 156,
           "origin": "路北龙泉西里小区",
           "accurate": 2
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        },
-        {
-          "rid": 218,
-          "origin": "龙王庙市场",
-          "accurate": 2
         }
       ]
     },
     {
-      "id": "W0058",
-      "date": "22",
-      "area": "路北区",
-      "track": [
-        {
-          "rid": 49,
-          "origin": "裕华嘉苑小区",
-          "accurate": 2
-        },
-        {
-          "rid": 219,
-          "origin": "高新盛世花园酒店",
-          "accurate": 2
-        },
-        {
-          "rid": 220,
-          "origin": "滦南翰林鑫苑小区",
-          "accurate": 2
-        },
-        {
-          "rid": 221,
-          "origin": "唐百超市（滦南）",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0059",
-      "date": "22",
-      "area": "路北区",
-      "track": [
-        {
-          "rid": 93,
-          "origin": "路北鹭港小区",
-          "accurate": 2
-        },
-        {
-          "rid": 222,
-          "origin": "凤凰园烤鸭店（新华道店）",
-          "accurate": 2
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        },
-        {
-          "rid": 223,
-          "origin": "三和牛肉板面馆（大庆东道与火炬路交叉口）",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0002",
-      "date": "20",
-      "area": "路南区",
-      "track": [
-        {
-          "origin": "路南鑫坤冷库"
-        },
-        {
-          "origin": "老胡新天地卤肉饭馆"
-        },
-        {
-          "rid": 68,
-          "origin": "华盛超市（新华道店）",
-          "accurate": 2
-        },
-        {
-          "rid": 69,
-          "origin": "四海制冷（永红桥附近）",
-          "accurate": 2
-        },
-        {
-          "rid": 70,
-          "origin": "南湖医院",
-          "accurate": 2
-        },
-        {
-          "rid": 71,
-          "origin": "路南市场监督管理局永红桥分局",
-          "accurate": 2
-        },
-        {
-          "rid": 73,
-          "origin": "河间驴肉火烧(新天地店)",
-          "accurate": 2
-        },
-        {
-          "rid": 72,
-          "origin": "吉祥彩钢",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0018",
+      "id": "W0039",
       "date": "21",
-      "area": "路南区",
+      "area": "高新区",
       "track": [
         {
-          "rid": 100,
-          "origin": "唐山火车站",
+          "rid": 157,
+          "origin": "路北红星楼市场",
           "accurate": 2
         },
         {
-          "rid": 101,
-          "origin": "山东省滨州市无棣县车王镇李什村",
+          "rid": 105,
+          "origin": "爱琴海",
           "accurate": 2
         },
         {
-          "rid": 194,
-          "origin": "中红鲜鸡冷冻厂（唐柏路附近）",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0019",
-      "date": "21",
-      "area": "路南区",
-      "track": [
-        {
-          "rid": 11,
-          "origin": "盛华市场",
+          "rid": 158,
+          "origin": "八方购物广场",
           "accurate": 2
         },
         {
-          "rid": 102,
-          "origin": "路南兴泰里小区",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0021",
-      "date": "21",
-      "area": "路南区",
-      "track": [
-        {
-          "origin": "路南景荣社区"
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0026",
-      "date": "21",
-      "area": "路南区",
-      "track": [
-        {
-          "rid": 119,
-          "origin": "路南西大夫坨村",
+          "rid": 159,
+          "origin": "星河湾小区",
           "accurate": 2
         },
         {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0029",
-      "date": "21",
-      "area": "路南区",
-      "track": [
-        {
-          "rid": 132,
-          "origin": "路南宋谢庄",
+          "rid": 8,
+          "origin": "远洋城",
           "accurate": 2
         },
         {
-          "rid": 11,
-          "origin": "盛华市场",
+          "rid": 160,
+          "origin": "人民购物广场",
+          "accurate": 2
+        },
+        {
+          "rid": 161,
+          "origin": "古冶林西东工房",
+          "accurate": 2
+        },
+        {
+          "rid": 162,
+          "origin": "林西百货大楼",
           "accurate": 2
         }
       ]
@@ -1414,6 +1809,138 @@
         {
           "rid": 164,
           "origin": "路南区仁泰里小区",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0041",
+      "date": "21",
+      "area": "曹妃甸",
+      "track": [
+        {
+          "rid": 165,
+          "origin": "曹妃甸季景华庭小区",
+          "accurate": 2
+        },
+        {
+          "rid": 166,
+          "origin": "荣域华府小区",
+          "accurate": 2
+        },
+        {
+          "rid": 167,
+          "origin": "远通批发市场",
+          "accurate": 2
+        },
+        {
+          "origin": "唐海购物中心"
+        },
+        {
+          "rid": 168,
+          "origin": "金色名苑底商臻鲜海鲜店",
+          "accurate": 2
+        },
+        {
+          "rid": 169,
+          "origin": "郑氏牙科",
+          "accurate": 2
+        },
+        {
+          "rid": 170,
+          "origin": "西玉坨庄",
+          "accurate": 2
+        },
+        {
+          "origin": "六场"
+        },
+        {
+          "rid": 67,
+          "origin": "路北君瑞市场",
+          "accurate": 2
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0042",
+      "date": "21",
+      "area": "高新区",
+      "track": [
+        {
+          "rid": 171,
+          "origin": "高新老庄子镇小城子村",
+          "accurate": 2
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        },
+        {
+          "rid": 172,
+          "origin": "瓦房庄村",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0043",
+      "date": "21",
+      "area": "高新区",
+      "track": [
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        },
+        {
+          "origin": "詹官屯大众浴池"
+        },
+        {
+          "rid": 173,
+          "origin": "魏庄子村委会",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0044",
+      "date": "21",
+      "area": "路北区",
+      "track": [
+        {
+          "rid": 10,
+          "origin": "佳华煤化工有限公司",
+          "accurate": 2
+        },
+        {
+          "origin": "路北好又香熟食店"
+        },
+        {
+          "rid": 174,
+          "origin": "龙泽路红红木炭火锅店",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0045",
+      "date": "21",
+      "area": "古冶区",
+      "track": [
+        {
+          "rid": 112,
+          "origin": "古冶耐火小区",
+          "accurate": 2
+        },
+        {
+          "rid": 13,
+          "origin": "美乐饭店",
           "accurate": 2
         }
       ]
@@ -1659,165 +2186,42 @@
       ]
     },
     {
-      "id": "Q0006",
-      "date": "19",
-      "area": "开平区",
+      "id": "W0054",
+      "date": "22",
+      "area": "路北区",
       "track": [
         {
-          "origin": "税钢社区"
-        },
-        {
-          "origin": "税钢小区早市"
-        },
-        {
-          "rid": 18,
-          "origin": "税钢小学",
+          "rid": 203,
+          "origin": "路北韩城镇万都国际小区",
           "accurate": 2
         },
         {
-          "rid": 12,
-          "origin": "古冶区唐钢胜利小区",
+          "rid": 204,
+          "origin": "韩城阳光超市",
           "accurate": 2
         },
         {
-          "rid": 13,
-          "origin": "美乐饭店",
+          "rid": 205,
+          "origin": "利康医院",
           "accurate": 2
         },
         {
-          "rid": 19,
-          "origin": "开平区殡仪馆",
+          "rid": 206,
+          "origin": "华北理工大学附属医院",
           "accurate": 2
         },
         {
-          "origin": "唐客隆澡堂"
-        }
-      ]
-    },
-    {
-      "id": "Q0007",
-      "date": "19",
-      "area": "开平区",
-      "track": [
-        {
-          "rid": 20,
-          "origin": "朝新楼",
+          "rid": 207,
+          "origin": "爆肚辉饭店",
           "accurate": 2
         },
         {
-          "rid": 21,
-          "origin": "唐山利满商贸",
-          "accurate": 2
+          "origin": "“童真心语”幼儿园"
         },
         {
-          "rid": 12,
-          "origin": "古冶区唐钢胜利小区",
+          "rid": 208,
+          "origin": "丰润车管所第三分所",
           "accurate": 2
-        },
-        {
-          "rid": 23,
-          "origin": "荣盛道华莱士",
-          "accurate": 2
-        },
-        {
-          "rid": 24,
-          "origin": "路南区税务局",
-          "accurate": 2
-        },
-        {
-          "rid": 25,
-          "origin": "小惠女装工厂店",
-          "accurate": 2
-        },
-        {
-          "rid": 22,
-          "origin": "新华超市",
-          "accurate": 2
-        },
-        {
-          "rid": 30,
-          "origin": "京华生活区",
-          "accurate": 2
-        },
-        {
-          "rid": 26,
-          "origin": "新城道口彦东商店",
-          "accurate": 2
-        },
-        {
-          "rid": 27,
-          "origin": "西新苑市场",
-          "accurate": 2
-        },
-        {
-          "rid": 28,
-          "origin": "唐山农业银行开平支行",
-          "accurate": 2
-        },
-        {
-          "rid": 398,
-          "origin": "开平区政府北门黄艾炙店",
-          "accurate": 1
-        },
-        {
-          "origin": "西新苑朝新诊所"
-        },
-        {
-          "rid": 29,
-          "origin": "康之家药店",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "Q0013",
-      "date": "21",
-      "area": "开平区",
-      "track": [
-        {
-          "rid": 52,
-          "origin": "马家沟启明星幼儿园",
-          "accurate": 2
-        },
-        {
-          "origin": "志方超市"
-        },
-        {
-          "rid": 53,
-          "origin": "前陡河村",
-          "accurate": 2
-        },
-        {
-          "rid": 54,
-          "origin": "弘慈医院",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0009",
-      "date": "21",
-      "area": "开平区",
-      "track": [
-        {
-          "rid": 83,
-          "origin": "紫荆花苑小区",
-          "accurate": 2
-        },
-        {
-          "rid": 52,
-          "origin": "马家沟启明星幼儿园",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0011",
-      "date": "21",
-      "area": "开平区",
-      "track": [
-        {
-          "origin": "开平越河镇小营村"
         },
         {
           "rid": 11,
@@ -1827,126 +2231,53 @@
       ]
     },
     {
-      "id": "W0012",
-      "date": "21",
-      "area": "开平区",
+      "id": "W0055",
+      "date": "22",
+      "area": "路北区",
       "track": [
         {
-          "rid": 52,
-          "origin": "马家沟启明星幼儿园",
+          "rid": 209,
+          "origin": "路北韩城镇左岸彩虹苑小区",
           "accurate": 2
         },
         {
-          "rid": 83,
-          "origin": "紫荆花苑小区",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0013",
-      "date": "21",
-      "area": "开平区",
-      "track": [
-        {
-          "rid": 83,
-          "origin": "紫荆花苑小区",
+          "rid": 210,
+          "origin": "超人影像",
           "accurate": 2
         },
         {
-          "origin": "程程理发店"
+          "origin": "鼎盛食品超市"
         },
         {
-          "rid": 84,
-          "origin": "马家沟市场",
+          "rid": 211,
+          "origin": "王氏拉面馆",
           "accurate": 2
         },
         {
-          "rid": 87,
-          "origin": "烈火蛋糕(唐马路店)",
+          "rid": 212,
+          "origin": "乐顺堂药房",
           "accurate": 2
         },
         {
-          "rid": 85,
-          "origin": "唐泰生鲜超市",
+          "rid": 213,
+          "origin": "一米六零食店",
           "accurate": 2
         },
         {
-          "rid": 88,
-          "origin": "骨里香熟食(马陡路店)",
+          "origin": "随想仓超市"
+        },
+        {
+          "rid": 214,
+          "origin": "羊城小筑饭馆",
           "accurate": 2
         },
         {
-          "rid": 86,
-          "origin": "德寿堂传统中医诊所",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0017",
-      "date": "21",
-      "area": "开平区",
-      "track": [
-        {
-          "rid": 96,
-          "origin": "开平马家沟",
+          "rid": 215,
+          "origin": "滦南胡各庄镇忠武跆拳道馆",
           "accurate": 2
         },
         {
-          "rid": 52,
-          "origin": "马家沟启明星幼儿园",
-          "accurate": 2
-        },
-        {
-          "origin": "开平美食街"
-        },
-        {
-          "origin": "马家沟工商银行"
-        },
-        {
-          "rid": 97,
-          "origin": "光华楼小区",
-          "accurate": 2
-        },
-        {
-          "origin": "马家沟后屯大集"
-        },
-        {
-          "rid": 98,
-          "origin": "丰润静园永和超市",
-          "accurate": 2
-        },
-        {
-          "origin": "南关"
-        },
-        {
-          "origin": "北关唐人医药"
-        },
-        {
-          "rid": 99,
-          "origin": "滦州郭庄村",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0025",
-      "date": "21",
-      "area": "开平区",
-      "track": [
-        {
-          "rid": 53,
-          "origin": "前陡河村",
-          "accurate": 2
-        },
-        {
-          "rid": 118,
-          "origin": "屈庄大桥附近口口香烧烤",
-          "accurate": 2
-        },
-        {
-          "origin": "志方超市"
+          "origin": "丰润DFK街舞"
         },
         {
           "rid": 11,
@@ -1956,49 +2287,383 @@
       ]
     },
     {
-      "id": "W0027",
-      "date": "21",
-      "area": "开平区",
+      "id": "W0056",
+      "date": "22",
+      "area": "路北区",
       "track": [
         {
-          "origin": "陡河村"
-        },
-        {
-          "rid": 52,
-          "origin": "马家沟启明星幼儿园",
+          "rid": 209,
+          "origin": "路北韩城镇左岸彩虹苑小区",
           "accurate": 2
         },
         {
-          "origin": "刘官屯村北湿巾厂"
-        },
-        {
-          "rid": 120,
-          "origin": "马家沟唐人医药",
+          "rid": 216,
+          "origin": "神童艺术幼儿园",
           "accurate": 2
         },
         {
-          "origin": "志方购物"
+          "rid": 210,
+          "origin": "超人影像",
+          "accurate": 2
         },
         {
-          "rid": 54,
-          "origin": "弘慈医院",
+          "rid": 214,
+          "origin": "羊城小筑饭馆",
+          "accurate": 2
+        },
+        {
+          "rid": 217,
+          "origin": "丰润北购商场",
           "accurate": 2
         }
       ]
     },
     {
-      "id": "W0036",
-      "date": "21",
-      "area": "开平区",
+      "id": "W0057",
+      "date": "22",
+      "area": "路北区",
       "track": [
         {
-          "rid": 149,
-          "origin": "开平河联园B区",
+          "rid": 156,
+          "origin": "路北龙泉西里小区",
           "accurate": 2
         },
         {
           "rid": 11,
           "origin": "盛华市场",
+          "accurate": 2
+        },
+        {
+          "rid": 218,
+          "origin": "龙王庙市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0058",
+      "date": "22",
+      "area": "路北区",
+      "track": [
+        {
+          "rid": 49,
+          "origin": "裕华嘉苑小区",
+          "accurate": 2
+        },
+        {
+          "rid": 219,
+          "origin": "高新盛世花园酒店",
+          "accurate": 2
+        },
+        {
+          "rid": 220,
+          "origin": "滦南翰林鑫苑小区",
+          "accurate": 2
+        },
+        {
+          "rid": 221,
+          "origin": "唐百超市（滦南）",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0059",
+      "date": "22",
+      "area": "路北区",
+      "track": [
+        {
+          "rid": 93,
+          "origin": "路北鹭港小区",
+          "accurate": 2
+        },
+        {
+          "rid": 222,
+          "origin": "凤凰园烤鸭店（新华道店）",
+          "accurate": 2
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        },
+        {
+          "rid": 223,
+          "origin": "三和牛肉板面馆（大庆东道与火炬路交叉口）",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0060",
+      "date": "22",
+      "area": "高新区",
+      "track": [
+        {
+          "rid": 78,
+          "origin": "高新党家庄村",
+          "accurate": 2
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        },
+        {
+          "rid": 224,
+          "origin": "娘娘庙村道口菜鸟驿站",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0061",
+      "date": "22",
+      "area": "高新区",
+      "track": [
+        {
+          "rid": 78,
+          "origin": "高新党家庄村",
+          "accurate": 2
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        },
+        {
+          "rid": 225,
+          "origin": "路南宝岛医院",
+          "accurate": 2
+        },
+        {
+          "rid": 79,
+          "origin": "保定市安新县端村镇大淀头村",
+          "accurate": 2
+        },
+        {
+          "rid": 80,
+          "origin": "安新县医院",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0062",
+      "date": "22",
+      "area": "高新区",
+      "track": [
+        {
+          "rid": 226,
+          "origin": "高新瓦官庄村",
+          "accurate": 2
+        },
+        {
+          "origin": "娘娘庙村欢乐超市"
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        },
+        {
+          "rid": 104,
+          "origin": "吾悦广场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0063",
+      "date": "22",
+      "area": "高新区",
+      "track": [
+        {
+          "origin": "高新盛华公寓"
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        },
+        {
+          "rid": 227,
+          "origin": "滦州安各庄镇西安各庄村",
+          "accurate": 2
+        },
+        {
+          "origin": "胜利路菜市场"
+        }
+      ]
+    },
+    {
+      "id": "W0064",
+      "date": "22",
+      "area": "高新区",
+      "track": [
+        {
+          "rid": 228,
+          "origin": "吉庆里小区",
+          "accurate": 2
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0065",
+      "date": "22",
+      "area": "高新区",
+      "track": [
+        {
+          "rid": 228,
+          "origin": "吉庆里小区",
+          "accurate": 2
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        },
+        {
+          "origin": "庆翠堂头疗养生会馆"
+        },
+        {
+          "rid": 229,
+          "origin": "滦州卧龙山庄小区",
+          "accurate": 2
+        },
+        {
+          "rid": 230,
+          "origin": "大横山营村",
+          "accurate": 2
+        },
+        {
+          "rid": 231,
+          "origin": "滦河大酒店",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0066",
+      "date": "22",
+      "area": "丰润区",
+      "track": [
+        {
+          "rid": 232,
+          "origin": "丰润任各庄镇肘各庄村",
+          "accurate": 2
+        },
+        {
+          "rid": 233,
+          "origin": "市协和医院",
+          "accurate": 2
+        },
+        {
+          "rid": 11,
+          "origin": "盛华市场",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0067",
+      "date": "22",
+      "area": "丰润区",
+      "track": [
+        {
+          "rid": 232,
+          "origin": "丰润任各庄镇肘各庄村",
+          "accurate": 2
+        },
+        {
+          "rid": 234,
+          "origin": "纪镇屯村",
+          "accurate": 2
+        },
+        {
+          "origin": "志伟超市",
+          "accurate": 0
+        },
+        {
+          "origin": "华容带钢厂"
+        },
+        {
+          "rid": 236,
+          "origin": "媛福达超市",
+          "accurate": 2
+        },
+        {
+          "rid": 235,
+          "origin": "任各庄镇卫生院",
+          "accurate": 2
+        },
+        {
+          "origin": "迎春药店",
+          "accurate": 0
+        },
+        {
+          "rid": 233,
+          "origin": "市协和医院",
+          "accurate": 2
+        },
+        {
+          "origin": "丰南众贸车队"
+        },
+        {
+          "origin": "盛伊物流"
+        },
+        {
+          "rid": 237,
+          "origin": "物产中大物流",
+          "accurate": 2
+        },
+        {
+          "rid": 238,
+          "origin": "天津大邱庄友发钢管厂",
+          "accurate": 2
+        },
+        {
+          "rid": 239,
+          "origin": "天津海虹金属公司",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0068",
+      "date": "22",
+      "area": "丰润区",
+      "track": [
+        {
+          "rid": 147,
+          "origin": "左家坞村",
+          "accurate": 2
+        },
+        {
+          "rid": 35,
+          "origin": "丰润开尔尚城小区",
+          "accurate": 2
+        }
+      ]
+    },
+    {
+      "id": "W0069",
+      "date": "22",
+      "area": "丰润区",
+      "track": [
+        {
+          "rid": 232,
+          "origin": "丰润任各庄镇肘各庄村",
+          "accurate": 2
+        },
+        {
+          "rid": 240,
+          "origin": "任各庄中心小学",
           "accurate": 2
         }
       ]
@@ -2072,187 +2737,6 @@
         {
           "rid": 11,
           "origin": "盛华市场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0030",
-      "date": "21",
-      "area": "滦州市",
-      "track": [
-        {
-          "rid": 133,
-          "origin": "高新娘娘庙村",
-          "accurate": 2
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        },
-        {
-          "rid": 134,
-          "origin": "滦州九百户村",
-          "accurate": 2
-        },
-        {
-          "rid": 135,
-          "origin": "郝庄村",
-          "accurate": 2
-        },
-        {
-          "rid": 136,
-          "origin": "安家楼村",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0077",
-      "date": "22",
-      "area": "滦州市",
-      "track": [
-        {
-          "rid": 99,
-          "origin": "滦州郭庄村",
-          "accurate": 2
-        },
-        {
-          "rid": 264,
-          "origin": "顾家庄村",
-          "accurate": 2
-        },
-        {
-          "rid": 265,
-          "origin": "秦皇岛市昌黎县兴国钢铁",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0078",
-      "date": "22",
-      "area": "滦州市",
-      "track": [
-        {
-          "rid": 99,
-          "origin": "滦州郭庄村",
-          "accurate": 2
-        },
-        {
-          "rid": 266,
-          "origin": "岩山商场",
-          "accurate": 2
-        },
-        {
-          "rid": 267,
-          "origin": "老站村彩票站",
-          "accurate": 2
-        },
-        {
-          "rid": 268,
-          "origin": "东流各庄村",
-          "accurate": 2
-        },
-        {
-          "origin": "郭庄村头烧烤店"
-        }
-      ]
-    },
-    {
-      "id": "Q0005",
-      "date": "19",
-      "area": "古冶区",
-      "track": [
-        {
-          "rid": 12,
-          "origin": "古冶区唐钢胜利小区",
-          "accurate": 2
-        },
-        {
-          "rid": 16,
-          "origin": "中国农业银行(唐山古冶车站分理处)",
-          "accurate": 2
-        },
-        {
-          "rid": 17,
-          "origin": "中国邮政储蓄银行(西新楼支行)",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0023",
-      "date": "21",
-      "area": "古冶区",
-      "track": [
-        {
-          "rid": 113,
-          "origin": "赵各庄第三小学",
-          "accurate": 2
-        },
-        {
-          "rid": 114,
-          "origin": "圣鸿鲜花庆典",
-          "accurate": 2
-        },
-        {
-          "rid": 115,
-          "origin": "古冶区中医院",
-          "accurate": 2
-        },
-        {
-          "rid": 116,
-          "origin": "赵各庄融园小区",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0032",
-      "date": "21",
-      "area": "古冶区",
-      "track": [
-        {
-          "origin": "古冶赵各庄矿劳动服务公司"
-        },
-        {
-          "origin": "赵各庄三村林西楼"
-        },
-        {
-          "rid": 143,
-          "origin": "马矿新区",
-          "accurate": 2
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        },
-        {
-          "rid": 144,
-          "origin": "古冶东华小区",
-          "accurate": 2
-        },
-        {
-          "origin": "美珍小火锅"
-        }
-      ]
-    },
-    {
-      "id": "W0045",
-      "date": "21",
-      "area": "古冶区",
-      "track": [
-        {
-          "rid": 112,
-          "origin": "古冶耐火小区",
-          "accurate": 2
-        },
-        {
-          "rid": 13,
-          "origin": "美乐饭店",
           "accurate": 2
         }
       ]
@@ -2412,509 +2896,54 @@
       ]
     },
     {
-      "id": "Q0008",
-      "date": "20",
-      "area": "丰润区",
-      "track": [
-        {
-          "rid": 31,
-          "origin": "丰润石各庄镇女过庄村",
-          "accurate": 2
-        },
-        {
-          "rid": 32,
-          "origin": "丰润早市",
-          "accurate": 2
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        },
-        {
-          "rid": 34,
-          "origin": "老庄子镇曼迪超市（原金客隆超市）及斜对面鸭货熟食店",
-          "accurate": 2
-        },
-        {
-          "rid": 33,
-          "origin": "三女河村菜鸟驿站",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "Q0009",
-      "date": "20",
-      "area": "丰润区",
-      "track": [
-        {
-          "rid": 35,
-          "origin": "丰润开尔尚城小区",
-          "accurate": 2
-        },
-        {
-          "rid": 36,
-          "origin": "浭阳雅园智慧托管",
-          "accurate": 2
-        },
-        {
-          "rid": 37,
-          "origin": "浭阳锦园小区",
-          "accurate": 2
-        },
-        {
-          "rid": 38,
-          "origin": "晨坤文体办公用品店",
-          "accurate": 2
-        },
-        {
-          "rid": 39,
-          "origin": "高新沙雾庄村",
-          "accurate": 2
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        },
-        {
-          "rid": 40,
-          "origin": "老庄子银龙加油站",
-          "accurate": 2
-        },
-        {
-          "origin": "老庄子镇十字街"
-        },
-        {
-          "origin": "开越路比亚迪和吉利汽车4S店"
-        },
-        {
-          "rid": 42,
-          "origin": "唐丰路长安汽车4S店",
-          "accurate": 2
-        },
-        {
-          "rid": 41,
-          "origin": "大庆道奇瑞汽车4S店",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "Q0011",
-      "date": "21",
-      "area": "丰润区",
-      "track": [
-        {
-          "rid": 31,
-          "origin": "丰润石各庄镇女过庄村",
-          "accurate": 2
-        },
-        {
-          "rid": 32,
-          "origin": "丰润早市",
-          "accurate": 2
-        },
-        {
-          "rid": 34,
-          "origin": "老庄子镇曼迪超市（原金客隆超市）及斜对面鸭货熟食店",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "Q0012",
-      "date": "21",
-      "area": "丰润区",
-      "track": [
-        {
-          "rid": 31,
-          "origin": "丰润石各庄镇女过庄村",
-          "accurate": 2
-        },
-        {
-          "rid": 32,
-          "origin": "丰润早市",
-          "accurate": 2
-        },
-        {
-          "rid": 34,
-          "origin": "老庄子镇曼迪超市（原金客隆超市）及斜对面鸭货熟食店",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "Q0015",
+      "id": "W0077",
       "date": "22",
-      "area": "丰润区",
+      "area": "滦州市",
       "track": [
         {
-          "rid": 56,
-          "origin": "丰润银铺乡前贾庄村",
+          "rid": 99,
+          "origin": "滦州郭庄村",
           "accurate": 2
         },
         {
-          "rid": 57,
-          "origin": "福慧超市",
+          "rid": 264,
+          "origin": "顾家庄村",
           "accurate": 2
         },
         {
-          "rid": 52,
-          "origin": "马家沟启明星幼儿园",
-          "accurate": 2
-        },
-        {
-          "origin": "丝潮理发馆"
-        },
-        {
-          "origin": "顺达广告公司"
-        },
-        {
-          "rid": 58,
-          "origin": "供销加油站",
+          "rid": 265,
+          "origin": "秦皇岛市昌黎县兴国钢铁",
           "accurate": 2
         }
       ]
     },
     {
-      "id": "W0014",
-      "date": "21",
-      "area": "丰润区",
-      "track": [
-        {
-          "rid": 89,
-          "origin": "丰润常庄村",
-          "accurate": 2
-        },
-        {
-          "origin": "城西王家楼市场"
-        },
-        {
-          "rid": 90,
-          "origin": "六小区",
-          "accurate": 2
-        },
-        {
-          "origin": "新军屯集"
-        },
-        {
-          "origin": "白各庄集"
-        },
-        {
-          "rid": 91,
-          "origin": "恒金仓储冷库",
-          "accurate": 2
-        },
-        {
-          "rid": 92,
-          "origin": "太平路街道办事处",
-          "accurate": 2
-        },
-        {
-          "origin": "中泰加油站"
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0034",
-      "date": "21",
-      "area": "丰润区",
-      "track": [
-        {
-          "rid": 146,
-          "origin": "市游泳馆",
-          "accurate": 2
-        },
-        {
-          "rid": 35,
-          "origin": "丰润开尔尚城小区",
-          "accurate": 2
-        },
-        {
-          "rid": 147,
-          "origin": "左家坞村",
-          "accurate": 2
-        },
-        {
-          "rid": 148,
-          "origin": "西金桥双语学校",
-          "accurate": 2
-        },
-        {
-          "origin": "东方诊所"
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0066",
+      "id": "W0078",
       "date": "22",
-      "area": "丰润区",
+      "area": "滦州市",
       "track": [
         {
-          "rid": 232,
-          "origin": "丰润任各庄镇肘各庄村",
+          "rid": 99,
+          "origin": "滦州郭庄村",
           "accurate": 2
         },
         {
-          "rid": 233,
-          "origin": "市协和医院",
+          "rid": 266,
+          "origin": "岩山商场",
           "accurate": 2
         },
         {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0067",
-      "date": "22",
-      "area": "丰润区",
-      "track": [
-        {
-          "rid": 232,
-          "origin": "丰润任各庄镇肘各庄村",
+          "rid": 267,
+          "origin": "老站村彩票站",
           "accurate": 2
         },
         {
-          "rid": 234,
-          "origin": "纪镇屯村",
+          "rid": 268,
+          "origin": "东流各庄村",
           "accurate": 2
         },
         {
-          "origin": "志伟超市"
-        },
-        {
-          "origin": "华容带钢厂"
-        },
-        {
-          "rid": 236,
-          "origin": "媛福达超市",
-          "accurate": 2
-        },
-        {
-          "rid": 235,
-          "origin": "任各庄镇卫生院",
-          "accurate": 2
-        },
-        {
-          "origin": "迎春药店"
-        },
-        {
-          "rid": 233,
-          "origin": "市协和医院",
-          "accurate": 2
-        },
-        {
-          "origin": "丰南众贸车队"
-        },
-        {
-          "origin": "盛伊物流"
-        },
-        {
-          "rid": 237,
-          "origin": "物产中大物流",
-          "accurate": 2
-        },
-        {
-          "rid": 238,
-          "origin": "天津大邱庄友发钢管厂",
-          "accurate": 2
-        },
-        {
-          "rid": 239,
-          "origin": "天津海虹金属公司",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0068",
-      "date": "22",
-      "area": "丰润区",
-      "track": [
-        {
-          "rid": 147,
-          "origin": "左家坞村",
-          "accurate": 2
-        },
-        {
-          "rid": 35,
-          "origin": "丰润开尔尚城小区",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0069",
-      "date": "22",
-      "area": "丰润区",
-      "track": [
-        {
-          "rid": 232,
-          "origin": "丰润任各庄镇肘各庄村",
-          "accurate": 2
-        },
-        {
-          "rid": 240,
-          "origin": "任各庄中心小学",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0007",
-      "date": "21",
-      "area": "丰南区",
-      "track": [
-        {
-          "rid": 81,
-          "origin": "丰南岔河金河小区",
-          "accurate": 2
-        },
-        {
-          "origin": "张庄子村口北侧饭店"
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0037",
-      "date": "21",
-      "area": "迁西县",
-      "track": [
-        {
-          "rid": 150,
-          "origin": "迁西东荒峪镇下川村",
-          "accurate": 2
-        },
-        {
-          "rid": 151,
-          "origin": "浤源超市（韩庄中学附近）",
-          "accurate": 2
-        },
-        {
-          "rid": 67,
-          "origin": "路北君瑞市场",
-          "accurate": 2
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0041",
-      "date": "21",
-      "area": "曹妃甸",
-      "track": [
-        {
-          "rid": 165,
-          "origin": "曹妃甸季景华庭小区",
-          "accurate": 2
-        },
-        {
-          "rid": 166,
-          "origin": "荣域华府小区",
-          "accurate": 2
-        },
-        {
-          "rid": 167,
-          "origin": "远通批发市场",
-          "accurate": 2
-        },
-        {
-          "origin": "唐海购物中心"
-        },
-        {
-          "rid": 168,
-          "origin": "金色名苑底商臻鲜海鲜店",
-          "accurate": 2
-        },
-        {
-          "rid": 169,
-          "origin": "郑氏牙科",
-          "accurate": 2
-        },
-        {
-          "rid": 170,
-          "origin": "西玉坨庄",
-          "accurate": 2
-        },
-        {
-          "origin": "六场"
-        },
-        {
-          "rid": 67,
-          "origin": "路北君瑞市场",
-          "accurate": 2
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "W0001",
-      "date": "20",
-      "area": "玉田县",
-      "track": [
-        {
-          "rid": 63,
-          "origin": "玉田虹桥镇珠树坞三村",
-          "accurate": 2
-        },
-        {
-          "rid": 64,
-          "origin": "二郎庙市场",
-          "accurate": 2
-        },
-        {
-          "rid": 65,
-          "origin": "金玉市场",
-          "accurate": 2
-        },
-        {
-          "origin": "鸦鸿桥镇双双超市旁某饺子馆"
-        },
-        {
-          "rid": 66,
-          "origin": "虹桥镇中学（未进校）",
-          "accurate": 2
-        },
-        {
-          "origin": "南环路核酸检测点等"
-        },
-        {
-          "rid": 11,
-          "origin": "盛华市场",
-          "accurate": 2
-        },
-        {
-          "rid": 67,
-          "origin": "路北君瑞市场",
-          "accurate": 2
+          "origin": "郭庄村头烧烤店"
         }
       ]
     },
@@ -2962,33 +2991,6 @@
         {
           "rid": 11,
           "origin": "盛华市场",
-          "accurate": 2
-        }
-      ]
-    },
-    {
-      "id": "Q0016",
-      "date": 23,
-      "area": "路北区",
-      "track": [
-        {
-          "rid": 59,
-          "origin": "路北金港国际静园小区",
-          "accurate": 2
-        },
-        {
-          "rid": 60,
-          "origin": "路北妇幼保健院",
-          "accurate": 2
-        },
-        {
-          "rid": 61,
-          "origin": "路北区疾控中心",
-          "accurate": 2
-        },
-        {
-          "rid": 62,
-          "origin": "家悦宾馆",
           "accurate": 2
         }
       ]
