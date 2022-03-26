@@ -52,13 +52,11 @@ export default {
             const peoples = data.peoples.map(people => {
               const track = people.track.map((pos, index) => {
                 let item = {}
-                if (typeof (pos) === 'number') {
-                  item = {...data.positions.find(p => p.id === pos)}
-                } else if (typeof (pos) === 'string') {
-                  item = {origin: pos, accurate: 1}
+                if (pos.rid) {
+                  item = {...pos, ...data.positions.find(p => p.rid === pos.rid)}
+                } else {
+                  item = {...pos, accurate: 1}
                   promises.push(this.searchPoint(item))
-                } else if (typeof (pos) === 'object') {
-                  item = {...pos}
                 }
                 item.id = `${people.id}-${index}`
                 return item
@@ -88,9 +86,7 @@ export default {
       const json = JSON.stringify({
         district: data.district,
         name: data.name,
-        origin: data.origin,
-        location: data.location,
-        accurate: 2
+        location: data.location
       })
       console.log(json)
       this.$refs.map.setCenter(data)
