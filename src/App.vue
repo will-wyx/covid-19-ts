@@ -21,14 +21,15 @@ import AMapLoader from '@amap/amap-jsapi-loader';
 
 export default {
   name: 'App',
-  components: {PeoplesTree, AMap},
+  components: { PeoplesTree, AMap },
   data() {
     return {
       peoples: [],
       points: [],
       AMap: null,
       loading: false,
-      expanded: []
+      expanded: [],
+      maxIndex: 0
     }
   },
   created() {
@@ -47,27 +48,30 @@ export default {
     loadData() {
       this.loading = true
       request.get('data/data.json')
-          .then(({data}) => {
+          .then(({ data }) => {
             const promises = []
+            this.maxIndex = data.positions.reduce((a, b) => {
+              return a.rid > b.rid ? a.rid : b.rid
+            })
             const peoples = data.peoples.map(people => {
               const track = people.track.map((pos, index) => {
                 let item
                 if (pos.rid) {
-                  item = {...pos, ...data.positions.find(p => p.rid === pos.rid)}
+                  item = { ...pos, ...data.positions.find(p => p.rid === pos.rid) }
                 } else {
-                  item = {...pos}
+                  item = { ...pos }
                   if (pos.accurate !== 0)
                     promises.push(this.searchPoint(item))
                 }
                 item.id = `${people.id}-${index}`
                 return item
               })
-              return {...people, track}
+              return { ...people, track }
             })
 
             Promise.all(promises)
                 .then(resList => {
-                  resList.forEach(({data, pos}) => {
+                  resList.forEach(({ data, pos }) => {
                     data.district = pos.district
                     data.name = pos.name
                     data.location = pos.location
@@ -86,6 +90,7 @@ export default {
     },
     handleNodeClick(data) {
       const json = JSON.stringify({
+        rid: ++this.maxIndex,
         district: data.district,
         name: data.name,
         location: data.location
@@ -106,7 +111,7 @@ export default {
           if (result) {
             let pos
             if (result.info === 'OK') {
-              const {district, name, location} = result.tips[0]
+              const { district, name, location } = result.tips[0]
               pos = {
                 district, name, location: {
                   lng: location.lng,
@@ -119,9 +124,9 @@ export default {
                 accurate: 0
               }
             }
-            resolve({data, pos})
+            resolve({ data, pos })
           } else {
-            reject({status, result, origin: data.origin})
+            reject({ status, result, origin: data.origin })
           }
         })
       })
