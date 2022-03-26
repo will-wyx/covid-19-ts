@@ -1,8 +1,14 @@
 <template>
   <div id="app" class="app">
-    <peoples-tree class="app__tree" :peoples="peoples" @change="handleChange" :loading="loading"
-                  @click="handleNodeClick"/>
-    <a-map class="app__map" :points="points" ref="map"/>
+    <peoples-tree
+        class="app__tree"
+        :peoples="peoples"
+        :expanded="expanded"
+        :loading="loading"
+        @change="handleChange"
+        @click="handleNodeClick"
+    />
+    <a-map class="app__map" :points="points" ref="map" @click="handleMarkerClick"/>
   </div>
 </template>
 
@@ -15,13 +21,14 @@ import AMapLoader from '@amap/amap-jsapi-loader';
 
 export default {
   name: 'App',
-  components: { PeoplesTree, AMap },
+  components: {PeoplesTree, AMap},
   data() {
     return {
       peoples: [],
       points: [],
       AMap: null,
-      loading: false
+      loading: false,
+      expanded: []
     }
   },
   created() {
@@ -40,27 +47,33 @@ export default {
     loadData() {
       this.loading = true
       request.get('data/data.json')
-          .then(({ data }) => {
+          .then(({data}) => {
             const promises = []
-            const { peoples, positions } = data
-            peoples.forEach(people => {
-              people.track = people.track.map((pos, i) => {
+            const peoples = data.peoples.map(people => {
+              const track = people.track.map((pos, index) => {
+                let item = {}
                 if (typeof (pos) === 'number') {
-                  return positions.find(p => p.id === pos)
+                  item = {...data.positions.find(p => p.id === pos)}
+                } else if (typeof (pos) === 'string') {
+                  item = {origin: pos, accurate: 1}
+                  promises.push(this.searchPoint(item))
+                } else if (typeof (pos) === 'object') {
+                  item = {...pos}
                 }
-                if (!pos.location) {
-                  promises.push(this.searchPoint(people, i, pos))
-                }
-                return pos
+                item.id = `${people.id}-${index}`
+                return item
               })
+              return {...people, track}
             })
 
             Promise.all(promises)
                 .then(resList => {
-                  resList.forEach(({ people, index, pos }) => {
-                    people.track[index] = pos
+                  resList.forEach(({data, pos}) => {
+                    data.district = pos.district
+                    data.name = pos.name
+                    data.location = pos.location
                   })
-                  this.peoples = data.peoples
+                  this.peoples = peoples
                   this.loading = false
                 })
                 .catch(err => {
@@ -82,34 +95,32 @@ export default {
       console.log(json)
       this.$refs.map.setCenter(data)
     },
-    searchPoint(people, index, keywords) {
+    handleMarkerClick(data) {
+      this.expanded = [data.id.slice(0, 5)]
+    },
+    searchPoint(data) {
       const autoOptions = {
         city: '唐山市'
       }
       return new Promise((resolve, reject) => {
         const autoComplete = new this.AMap.AutoComplete(autoOptions);
-        autoComplete.search(keywords, (status, result) => {
+        autoComplete.search(data.origin, (status, result) => {
           if (result) {
             let pos
             if (result.info === 'OK') {
-              const { district, name, location } = result.tips[0]
+              const {district, name, location} = result.tips[0]
               pos = {
-                origin: keywords,
                 district, name, location: {
                   lng: location.lng,
                   lat: location.lat,
-                },
-                accurate: 1
+                }
               }
             } else {
-              pos = {
-                origin: keywords,
-                name: keywords
-              }
+              pos = {}
             }
-            resolve({ people, index, pos })
+            resolve({data, pos})
           } else {
-            reject({ status, result, keywords })
+            reject({status, result, origin: data.origin})
           }
         })
       })

@@ -1,6 +1,7 @@
 <template>
   <el-tree
       node-key="id"
+      :default-expanded-keys="expanded"
       show-checkbox
       :data="treeData"
       :props="defaultProps"
@@ -43,6 +44,12 @@ export default {
     loading: {
       type: Boolean,
       default: false
+    },
+    expanded: {
+      type: Array,
+      default: () => {
+        return []
+      }
     }
   },
   computed: {
@@ -58,14 +65,8 @@ export default {
           list = wData
         }
 
-        const children = people.track.map((e, i) => {
-          let result
-          if (e instanceof Object) {
-            result = { id: `${people.id}-${i}`, label: e.name, ...e }
-          } else {
-            result = { id: `${people.id}-${i}`, label: e, name: e }
-          }
-          return result
+        const children = people.track.map((e) => {
+          return {label: e.origin || e.name, ...e}
         })
 
         list.push({
@@ -80,13 +81,13 @@ export default {
       wData.sort((a, b) => a.no - b.no)
 
       return [
-        { id: 'q', label: `确诊 [${qData.length}]`, children: qData },
-        { id: 'w', label: `无症状 [${wData.length}]`, children: wData },
+        {id: 'q', label: `确诊 [${qData.length}]`, children: qData},
+        {id: 'w', label: `无症状 [${wData.length}]`, children: wData},
       ]
     }
   },
   methods: {
-    handleCheck(e, { checkedNodes }) {
+    handleCheck(e, {checkedNodes}) {
       const nodes = checkedNodes.filter(node => !node.children)
       this.$emit('change', nodes)
     },

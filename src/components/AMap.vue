@@ -1,5 +1,11 @@
 <template>
-  <div class="a-map" ref="amap"></div>
+  <div class="a-map">
+    <div class="a-map__map" ref="amap"></div>
+    <div class="a-map__marker" ref="marker">
+      <p>{{ current.id }}</p>
+      <p>{{ current.title }}</p>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -11,7 +17,12 @@ export default {
     return {
       map: null,
       cluster: null,
-      AMap: null
+      AMap: null,
+      infoWindow: null,
+      current: {
+        id: '',
+        title: ''
+      }
     }
   },
   props: {
@@ -30,17 +41,25 @@ export default {
       const points = []
       value.forEach(point => {
         if (point.location) {
-          points.push({ id: point.id, lnglat: [point.location.lng, point.location.lat] })
+          points.push({id: point.id, title: point.origin, lnglat: [point.location.lng, point.location.lat]})
         } else {
-          console.log(point.id, point.name)
+          console.log(point.id, point.origin)
         }
       })
 
       if (this.cluster) {
         this.cluster.setMap(null);
       }
-      this.cluster = new this.AMap.MarkerCluster(this.map, points, { gridSize: 60 });
+      this.cluster = new this.AMap.MarkerCluster(this.map, points, {gridSize: 60});
+      this.cluster.on('click', ({clusterData, lnglat}) => {
+        const {id, title} = clusterData[0]
+        this.current.id = id
+        this.current.title = title
+        this.infoWindow.open(this.map, lnglat)
+        this.$emit('click', {id, title})
+      })
       this.map.setFitView(null, true)
+      this.infoWindow.close()
     }
   },
   methods: {
@@ -57,6 +76,13 @@ export default {
           zoom: 10,
           center: [118.144541, 39.696604]
         })
+
+        const marker = this.$refs.marker
+
+        this.infoWindow = new AMap.InfoWindow({
+          anchor: 'top-left',
+          content: marker
+        })
       }).catch(e => {
         console.log(e)
       })
@@ -69,7 +95,7 @@ export default {
       return new Promise((resolve, reject) => {
         autoComplete.search(point.name, (status, result) => {
           if (result.info === 'OK') {
-            const { district, name, location } = result.tips[0]
+            const {district, name, location} = result.tips[0]
             const pos = {
               id: point.id, origin: point.name,
               district, name, location: {
@@ -84,7 +110,7 @@ export default {
         })
       })
     },
-    setCenter({ location }) {
+    setCenter({location}) {
       this.map.setZoomAndCenter(17, [location.lng, location.lat], true)
     }
   },
@@ -92,8 +118,14 @@ export default {
 </script>
 
 <style scoped>
-.a-map {
+.a-map, .a-map__map {
   width: 100%;
   height: 100%;
+}
+
+.a-map__marker p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
 }
 </style>
