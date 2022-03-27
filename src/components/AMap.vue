@@ -52,11 +52,13 @@ export default {
       }
       this.cluster = new this.AMap.MarkerCluster(this.map, points, {gridSize: 60});
       this.cluster.on('click', ({clusterData, lnglat}) => {
-        const {id, title} = clusterData[0]
-        this.current.id = id
-        this.current.title = title
-        this.infoWindow.open(this.map, lnglat)
-        this.$emit('click', {id, title})
+        if (clusterData.length) {
+          const {id, title} = clusterData[0]
+          this.current.id = id
+          this.current.title = title
+          this.infoWindow.open(this.map, lnglat)
+          this.$emit('click', {id, title})
+        }
       })
       this.map.setFitView(null, true)
       this.infoWindow.close()
