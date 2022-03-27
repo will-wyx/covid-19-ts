@@ -13,16 +13,17 @@
     <div class="app__main">
       <div class="app__filter">
         <el-checkbox
-            v-for="(area, i) of areas"
-            :key="i"
+            v-for="(area, i) of options.areas"
+            :key="`a-${i}`"
             v-model="area.checked"
             @change="handleAreaChange"
         >{{ area.label }} ({{ area.countQ }}+{{ area.countW }})
         </el-checkbox>
         <el-checkbox
-            v-for="(date, i) of dates"
-            :key="i"
+            v-for="(date, i) of options.dates"
+            :key="`d-${i}`"
             v-model="date.checked"
+            @change="handleDateChange"
         >{{ date.label }} ({{ date.countQ }}+{{ date.countW }})
         </el-checkbox>
       </div>
@@ -40,15 +41,20 @@ import AMapLoader from '@amap/amap-jsapi-loader';
 
 export default {
   name: 'App',
-  components: { PeoplesTree, AMap },
+  components: {PeoplesTree, AMap},
   data() {
     return {
+      allPeoples: [],
       peoples: [],
       points: [],
       AMap: null,
       loading: false,
       expanded: [],
       maxIndex: 0,
+      options: {
+        areas: [],
+        dates: []
+      },
       areas: [],
       dates: []
     }
@@ -69,57 +75,57 @@ export default {
     loadData() {
       this.loading = true
       request.get('data/data.json')
-          .then(({ data }) => {
+          .then(({data}) => {
             const promises = []
             this.maxIndex = data.positions.reduce((a, b) => {
               return a.rid > b.rid ? a.rid : b.rid
             })
             const peoples = data.peoples.map(people => {
-              let area = this.areas.find(a => a.label === people.area)
+              const peopleType = people.id.slice(0, 1)
+              let area = this.options.areas.find(a => a.label === people.area)
               if (!area) {
-                area = { label: people.area, checked: false }
-                area.countQ = 1
-                area.countW = 1
-                this.areas.push(area)
+                area = {label: people.area, checked: true, countQ: 0, countW: 0}
+                area[`count${peopleType}`] = 1
+                this.options.areas.push(area)
               } else {
-                area.countQ++
-                area.countW++
+                area[`count${peopleType}`]++
               }
+              this.areas = this.options.areas.map(a => a.label)
 
-              let date = this.dates.find(d => d.label === people.date)
+              let date = this.options.dates.find(d => d.label === people.date)
               if (!date) {
-                date = { label: people.date, checked: false}
-                date.countQ = 1
-                date.countW = 1
-                this.dates.push(date)
+                date = {label: people.date, checked: true, countQ: 0, countW: 0}
+                date[`count${peopleType}`] = 1
+                this.options.dates.push(date)
               } else {
-                date.countQ++
-                date.countW++
+                date[`count${peopleType}`]++
               }
+              this.dates = this.options.dates.map(d => d.label)
 
               const track = people.track.map((pos, index) => {
                 let item
                 if (pos.rid) {
-                  item = { ...pos, ...data.positions.find(p => p.rid === pos.rid) }
+                  item = {...pos, ...data.positions.find(p => p.rid === pos.rid)}
                 } else {
-                  item = { ...pos }
+                  item = {...pos}
                   if (pos.accurate !== 0)
                     promises.push(this.searchPoint(item))
                 }
                 item.id = `${people.id}-${index}`
                 return item
               })
-              return { ...people, track }
+              return {...people, track}
             })
 
             Promise.all(promises)
                 .then(resList => {
-                  resList.forEach(({ data, pos }) => {
+                  resList.forEach(({data, pos}) => {
                     data.district = pos.district
                     data.name = pos.name
                     data.location = pos.location
                     data.accurate = pos.accurate
                   })
+                  this.allPeoples = peoples
                   this.peoples = peoples
                   this.loading = false
                 })
@@ -139,12 +145,31 @@ export default {
     },
     handleAreaChange() {
       let areas = []
-      this.areas.forEach(area => {
+      this.options.areas.forEach(area => {
         if (area.checked) {
           areas.push(area.label)
         }
       })
-      this.$refs.tree.checkAreas(areas)
+      this.areas = areas
+      this.filterPeoples()
+    },
+    handleDateChange() {
+      let dates = []
+      this.options.dates.forEach(date => {
+        if (date.checked) {
+          dates.push(date.label)
+        }
+      })
+      this.dates = dates
+      this.filterPeoples()
+    },
+    filterPeoples() {
+      this.peoples = this.allPeoples.filter(people => {
+        const {date, area} = people
+        const inDate = this.dates.some(d => d === date)
+        const inArea = this.areas.some(a => a === area)
+        return inDate && inArea
+      })
     },
     searchPoint(data) {
       const autoOptions = {
@@ -156,7 +181,7 @@ export default {
           if (result) {
             let pos
             if (result.info === 'OK') {
-              const { district, name, location } = result.tips[0]
+              const {district, name, location} = result.tips[0]
               pos = {
                 district, name, location: {
                   lng: location.lng,
@@ -169,9 +194,9 @@ export default {
                 accurate: 0
               }
             }
-            resolve({ data, pos })
+            resolve({data, pos})
           } else {
-            reject({ status, result, origin: data.origin })
+            reject({status, result, origin: data.origin})
           }
         })
       })
