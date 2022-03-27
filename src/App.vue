@@ -168,7 +168,8 @@ export default {
       this.$refs.map.setCenter(data)
     },
     handleMarkerClick(data) {
-      this.expanded = [data.id.slice(0, 5)]
+      const ids = data.map(item => item.id.slice(0, 5))
+      this.expanded = ids
     },
     filterPeoples() {
       this.peoples = this.allPeoples.filter(people => {

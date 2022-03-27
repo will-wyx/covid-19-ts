@@ -2,8 +2,10 @@
   <div class="a-map">
     <div class="a-map__map" ref="amap"></div>
     <div class="a-map__marker" ref="marker">
-      <p>{{ current.id }}</p>
-      <p>{{ current.title }}</p>
+      <div class="a-map__marker__item" v-for="item of currentCluster" :key="item.id">
+        <p class="marker__title">{{ item.id }}</p>
+        <p class="marker__content">{{ item.title }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -19,10 +21,7 @@ export default {
       cluster: null,
       AMap: null,
       infoWindow: null,
-      current: {
-        id: '',
-        title: ''
-      }
+      currentCluster: []
     }
   },
   props: {
@@ -52,13 +51,14 @@ export default {
       }
       this.cluster = new this.AMap.MarkerCluster(this.map, points, {gridSize: 60});
       this.cluster.on('click', ({clusterData, lnglat}) => {
-        if (clusterData.length) {
-          const {id, title} = clusterData[0]
-          this.current.id = id
-          this.current.title = title
-          this.infoWindow.open(this.map, lnglat)
-          this.$emit('click', {id, title})
-        }
+        const currentCluster = []
+        clusterData.forEach(item => {
+          const {id, title} = item;
+          currentCluster.push({id, title})
+        })
+        this.currentCluster = currentCluster
+        this.infoWindow.open(this.map, lnglat)
+        this.$emit('click', currentCluster)
       })
       this.map.setFitView(null, true)
       this.infoWindow.close()
@@ -119,15 +119,31 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .a-map, .a-map__map {
   width: 100%;
   height: 100%;
 }
 
-.a-map__marker p {
-  margin: 0;
-  font-size: 14px;
-  color: #333;
+.a-map__marker {
+  &__item {
+    padding-bottom: 3px;
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .marker__title {
+
+    }
+
+    .marker__content {
+      font-size: 13px;
+      color: #888;
+    }
+  }
 }
+
 </style>
