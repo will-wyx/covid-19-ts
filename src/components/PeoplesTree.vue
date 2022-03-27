@@ -13,13 +13,15 @@
       @node-contextmenu="handleContextmenu"
   >
      <span
+         slot-scope="{ node, data }"
          class="peoples-tree__label"
          :class="{
        accurate0: node.level === 3 && !data.accurate,
        accurate1: node.level === 3 && data.accurate===1,
        accurate2: node.level === 3 && data.accurate===2,
-     }" slot-scope="{ node, data }">
+     }">
        {{ data.label }}
+      <span v-if="data.date" class="peoples-tree__date">{{ data.date }}</span>
      </span>
   </el-tree>
 </template>
@@ -80,6 +82,7 @@ export default {
           id: people.id,
           no: +no,
           label: `${no} ${people.area} (${children.length})`,
+          date: people.date,
           children
         })
       })
@@ -140,8 +143,14 @@ export default {
   overflow: auto;
   box-sizing: border-box;
 
+  $tree: &;
+
   &__label {
     font-size: 14px;
+
+    #{$tree + '__date'} {
+      color: #ccc;
+    }
   }
 
   .accurate0 {

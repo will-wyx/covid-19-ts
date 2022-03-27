@@ -17,7 +17,13 @@
             :key="i"
             v-model="area.checked"
             @change="handleAreaChange"
-        >{{ area.label }}({{area.count}})
+        >{{ area.label }} ({{ area.countQ }}+{{ area.countW }})
+        </el-checkbox>
+        <el-checkbox
+            v-for="(date, i) of dates"
+            :key="i"
+            v-model="date.checked"
+        >{{ date.label }} ({{ date.countQ }}+{{ date.countW }})
         </el-checkbox>
       </div>
       <a-map class="app__map" :points="points" ref="map" @click="handleMarkerClick"/>
@@ -43,7 +49,8 @@ export default {
       loading: false,
       expanded: [],
       maxIndex: 0,
-      areas: []
+      areas: [],
+      dates: []
     }
   },
   created() {
@@ -68,12 +75,28 @@ export default {
               return a.rid > b.rid ? a.rid : b.rid
             })
             const peoples = data.peoples.map(people => {
-              const area = this.areas.find(a => a.label === people.area)
+              let area = this.areas.find(a => a.label === people.area)
               if (!area) {
-                this.areas.push({ label: people.area, checked: false, count: 1 })
+                area = { label: people.area, checked: false }
+                area.countQ = 1
+                area.countW = 1
+                this.areas.push(area)
               } else {
-                area.count++
+                area.countQ++
+                area.countW++
               }
+
+              let date = this.dates.find(d => d.label === people.date)
+              if (!date) {
+                date = { label: people.date, checked: false}
+                date.countQ = 1
+                date.countW = 1
+                this.dates.push(date)
+              } else {
+                date.countQ++
+                date.countW++
+              }
+
               const track = people.track.map((pos, index) => {
                 let item
                 if (pos.rid) {
