@@ -91,8 +91,8 @@ export default {
       wData.sort((a, b) => a.no - b.no)
 
       return [
-        { id: 'q', label: `确诊 [${qData.length}]`, children: qData },
-        { id: 'w', label: `无症状 [${wData.length}]`, children: wData },
+        { id: 'Q', label: `确诊 [${qData.length}]`, children: qData },
+        { id: 'W', label: `无症状 [${wData.length}]`, children: wData },
       ]
     }
   },

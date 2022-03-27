@@ -12,20 +12,44 @@
     />
     <div class="app__main">
       <div class="app__filter">
-        <el-checkbox
-            v-for="(area, i) of options.areas"
-            :key="`a-${i}`"
-            v-model="area.checked"
-            @change="handleAreaChange"
-        >{{ area.label }} ({{ area.countQ }}+{{ area.countW }})
-        </el-checkbox>
-        <el-checkbox
-            v-for="(date, i) of options.dates"
-            :key="`d-${i}`"
-            v-model="date.checked"
-            @change="handleDateChange"
-        >{{ date.label }} ({{ date.countQ }}+{{ date.countW }})
-        </el-checkbox>
+        <el-select
+            v-model="areas"
+            multiple
+            placeholder="请选择"
+            size="mini"
+            class="app__filter__item"
+            @change="filterPeoples"
+        >
+          <el-option
+              class="app__option"
+              v-for="item in options.areas"
+              :key="item.value"
+              :label="item.label"
+              :value="item.value"
+          >
+            <span class="app__option__label">{{ item.label }}</span>
+            <span class="app__option__count">{{ item.countQ }}+{{ item.countW }}</span>
+          </el-option>
+        </el-select>
+        <el-select
+            v-model="dates"
+            multiple
+            placeholder="请选择"
+            size="mini"
+            class="app__filter__item"
+            @change="filterPeoples"
+        >
+          <el-option
+              class="app__option"
+              v-for="item in options.dates"
+              :key="item.value"
+              :label="item.label"
+              :value="item.value"
+          >
+            <span class="app__option__label">{{ item.label }}</span>
+            <span class="app__option__count">{{ item.countQ }}+{{ item.countW }}</span>
+          </el-option>
+        </el-select>
       </div>
       <a-map class="app__map" :points="points" ref="map" @click="handleMarkerClick"/>
     </div>
@@ -49,7 +73,7 @@ export default {
       points: [],
       AMap: null,
       loading: false,
-      expanded: [],
+      expanded: ['Q', 'W'],
       maxIndex: 0,
       options: {
         areas: [],
@@ -82,25 +106,25 @@ export default {
             })
             const peoples = data.peoples.map(people => {
               const peopleType = people.id.slice(0, 1)
-              let area = this.options.areas.find(a => a.label === people.area)
+              let area = this.options.areas.find(a => a.value === people.area)
               if (!area) {
-                area = {label: people.area, checked: true, countQ: 0, countW: 0}
+                area = {value: people.area, label: people.area, checked: true, countQ: 0, countW: 0}
                 area[`count${peopleType}`] = 1
                 this.options.areas.push(area)
               } else {
                 area[`count${peopleType}`]++
               }
-              this.areas = this.options.areas.map(a => a.label)
+              area.label = `${area.value} [${area.countQ}+${area.countW}]`
 
-              let date = this.options.dates.find(d => d.label === people.date)
+              let date = this.options.dates.find(d => d.value === people.date)
               if (!date) {
-                date = {label: people.date, checked: true, countQ: 0, countW: 0}
+                date = {value: people.date, label: people.date.slice(5), checked: true, countQ: 0, countW: 0}
                 date[`count${peopleType}`] = 1
                 this.options.dates.push(date)
               } else {
                 date[`count${peopleType}`]++
               }
-              this.dates = this.options.dates.map(d => d.label)
+              date.label = `${date.value} [${date.countQ}+${date.countW}]`
 
               const track = people.track.map((pos, index) => {
                 let item
@@ -116,6 +140,9 @@ export default {
               })
               return {...people, track}
             })
+
+            this.areas = this.options.areas.map(a => a.value)
+            this.dates = this.options.dates.map(d => d.value)
 
             Promise.all(promises)
                 .then(resList => {
@@ -142,26 +169,6 @@ export default {
     },
     handleMarkerClick(data) {
       this.expanded = [data.id.slice(0, 5)]
-    },
-    handleAreaChange() {
-      let areas = []
-      this.options.areas.forEach(area => {
-        if (area.checked) {
-          areas.push(area.label)
-        }
-      })
-      this.areas = areas
-      this.filterPeoples()
-    },
-    handleDateChange() {
-      let dates = []
-      this.options.dates.forEach(date => {
-        if (date.checked) {
-          dates.push(date.label)
-        }
-      })
-      this.dates = dates
-      this.filterPeoples()
     },
     filterPeoples() {
       this.peoples = this.allPeoples.filter(people => {
@@ -238,5 +245,20 @@ html, body, .app {
     }
   }
 
+  &__filter__item {
+    width: 100%;
+  }
+
+  &__option {
+    font-size: 13px;
+
+    &__label {
+      margin-right: 1rem;
+    }
+
+    &__count {
+      color: #8492a6;
+    }
+  }
 }
 </style>
