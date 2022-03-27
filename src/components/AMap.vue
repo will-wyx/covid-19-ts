@@ -79,6 +79,10 @@ export default {
           center: [118.144541, 39.696604]
         })
 
+        this.map.on('rightclick', ({lnglat}) => {
+          console.log(lnglat)
+        })
+
         const marker = this.$refs.marker
 
         this.infoWindow = new AMap.InfoWindow({

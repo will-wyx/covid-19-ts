@@ -72,6 +72,7 @@ export default {
       peoples: [],
       points: [],
       AMap: null,
+      autoComplete: null,
       loading: false,
       expanded: ['Q', 'W'],
       maxIndex: 0,
@@ -91,6 +92,11 @@ export default {
     }).then((AMap) => {
       this.AMap = AMap
       this.loadData()
+
+      const autoOptions = {
+        city: '唐山市'
+      }
+      this.autoComplete = new this.AMap.AutoComplete(autoOptions);
     }).catch(e => {
       console.log(e)
     })
@@ -180,12 +186,8 @@ export default {
       })
     },
     searchPoint(data) {
-      const autoOptions = {
-        city: '唐山市'
-      }
       return new Promise((resolve, reject) => {
-        const autoComplete = new this.AMap.AutoComplete(autoOptions);
-        autoComplete.search(data.origin, (status, result) => {
+        this.autoComplete.search(data.origin, (status, result) => {
           if (result) {
             let pos
             if (result.info === 'OK') {
