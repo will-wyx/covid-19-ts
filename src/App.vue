@@ -93,10 +93,10 @@ export default {
       this.AMap = AMap
       this.loadData()
 
-      const autoOptions = {
+      const options = {
         city: '唐山市'
       }
-      this.autoComplete = new this.AMap.AutoComplete(autoOptions);
+      this.autoComplete = new this.AMap.AutoComplete(options)
     }).catch(e => {
       console.log(e)
     })

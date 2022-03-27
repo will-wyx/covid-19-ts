@@ -20,6 +20,7 @@ export default {
       map: null,
       cluster: null,
       AMap: null,
+      geocoder: null,
       infoWindow: null,
       currentCluster: []
     }
@@ -70,9 +71,14 @@ export default {
       AMapLoader.load({
         key: 'd786ac93724ce3d6658748d66cf5be5b',
         version: '2.0',
-        plugins: ['AMap.MarkerCluster', 'AMap.AutoComplete']
+        plugins: ['AMap.MarkerCluster', 'AMap.Geocoder']
       }).then((AMap) => {
         this.AMap = AMap
+        const options = {
+          city: '唐山市'
+        }
+        this.geocoder = new this.AMap.Geocoder(options)
+
         this.map = new AMap.Map(container, {
           viewMode: '2D',
           zoom: 10,
@@ -80,7 +86,13 @@ export default {
         })
 
         this.map.on('rightclick', ({lnglat}) => {
-          console.log(lnglat)
+          this.geocoder.getAddress(lnglat, (status, result) => {
+            const {regeocode: {formattedAddress}} = result
+            this.geocoder.getLocation(formattedAddress, (s, r) => {
+              const [{location: {lng, lat}}] = r.geocodes
+              console.log(JSON.stringify({location: {lng, lat}}))
+            })
+          })
         })
 
         const marker = this.$refs.marker
@@ -91,29 +103,6 @@ export default {
         })
       }).catch(e => {
         console.log(e)
-      })
-    },
-    searchPoint(point) {
-      const autoOptions = {
-        city: '唐山市'
-      }
-      const autoComplete = new this.AMap.AutoComplete(autoOptions);
-      return new Promise((resolve, reject) => {
-        autoComplete.search(point.name, (status, result) => {
-          if (result.info === 'OK') {
-            const {district, name, location} = result.tips[0]
-            const pos = {
-              id: point.id, origin: point.name,
-              district, name, location: {
-                lng: location.lng,
-                lat: location.lat
-              }
-            }
-            resolve(pos)
-          } else {
-            reject('err')
-          }
-        })
       })
     },
     setCenter({location}) {
