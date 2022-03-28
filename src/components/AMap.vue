@@ -9,6 +9,27 @@
         <p class="marker__content">{{ item.title }}</p>
       </div>
     </div>
+    <div class="a-map__complete">
+      <el-select
+          class="complete__control"
+          v-model="address"
+          filterable
+          remote
+          reserve-keyword
+          placeholder="请输入关键词"
+          :remote-method="searchAddress"
+          :loading="loading"
+          size="mini"
+          @change="handleCompleteChange"
+      >
+        <el-option
+            v-for="item in options"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value">
+        </el-option>
+      </el-select>
+    </div>
   </div>
 </template>
 
@@ -23,8 +44,12 @@ export default {
       cluster: null,
       AMap: null,
       geocoder: null,
+      autoComplete: null,
       infoWindow: null,
-      currentCluster: []
+      currentCluster: [],
+      address: null,
+      loading: false,
+      options: []
     }
   },
   props: {
@@ -73,13 +98,14 @@ export default {
       AMapLoader.load({
         key: 'd786ac93724ce3d6658748d66cf5be5b',
         version: '2.0',
-        plugins: ['AMap.MarkerCluster', 'AMap.Geocoder']
+        plugins: ['AMap.MarkerCluster', 'AMap.Geocoder', 'AMap.AutoComplete']
       }).then((AMap) => {
         this.AMap = AMap
         const options = {
           city: '唐山市'
         }
         this.geocoder = new this.AMap.Geocoder(options)
+        this.autoComplete = new this.AMap.AutoComplete(options)
 
         this.map = new AMap.Map(container, {
           viewMode: '2D',
@@ -111,39 +137,78 @@ export default {
         console.log(e)
       })
     },
+    searchAddress(query) {
+      if (query !== '') {
+        this.loading = true
+        this.autoComplete.search(query, (status, result) => {
+          if (result) {
+            this.options = result.tips.map(({id, district, name, location}) => {
+              return {value: id, label: `${district}${name}`, location}
+            })
+            this.loading = false
+          }
+        })
+      } else {
+        this.options = [];
+      }
+    },
     setCenter({location}) {
       this.map.setZoomAndCenter(17, [location.lng, location.lat], true)
     },
     handleMarkerItemClick(item) {
       this.$emit('marker-item-click', item.id)
+    },
+    handleCompleteChange(value) {
+      const item = this.options.find(e => {
+        return e.value === value
+      })
+      this.setCenter(item)
     }
   },
 }
 </script>
 
 <style scoped lang="scss">
-.a-map, .a-map__map {
+.a-map {
+  position: relative;
   width: 100%;
   height: 100%;
-}
 
-.a-map__marker {
-  &__item {
-    padding-bottom: 3px;
+  &__map {
+    width: 100%;
+    height: 100%;
+  }
 
-    p {
-      margin: 0;
-      font-size: 14px;
-      color: #333;
+  &__marker {
+    &__item {
+      padding-bottom: 3px;
+
+      p {
+        margin: 0;
+        font-size: 14px;
+        color: #333;
+      }
+
+      .marker__title {
+
+      }
+
+      .marker__content {
+        font-size: 13px;
+        color: #888;
+      }
     }
+  }
 
-    .marker__title {
+  .a-map__complete {
+    position: absolute;
+    width: 15rem;
+    height: 2rem;
+    top: .5rem;
+    left: .5rem;
 
-    }
-
-    .marker__content {
-      font-size: 13px;
-      color: #888;
+    .complete__control {
+      width: 100%;
     }
   }
 }
