@@ -285,9 +285,7 @@
           "origin": "开平区政府北门艾炙店",
           "accurate": 1
         },
-        {
-          "origin": "西新苑朝新诊所"
-        },
+        {"rid":20,"accurate":1,"origin":"西新苑朝新诊所"},
         {
           "rid": 29,
           "origin": "康之家药店",
@@ -368,6 +366,8 @@
           "accurate": 2
         },
         {
+          "rid": 385,
+          "accurate": 2,
           "origin": "老庄子镇十字街"
         },
         {
@@ -913,8 +913,8 @@
         },
         {
           "rid": 84,
-          "origin": "马家沟市场",
-          "accurate": 2
+          "accurate": 2,
+          "origin": "马家沟市场"
         },
         {
           "rid": 87,
@@ -1056,6 +1056,8 @@
           "accurate": 2
         },
         {
+          "rid": 84,
+          "accurate": 1,
           "origin": "马家沟后屯大集"
         },
         {
@@ -1064,6 +1066,8 @@
           "accurate": 2
         },
         {
+          "rid": 342,
+          "accurate": 1,
           "origin": "南关"
         },
         {
@@ -1269,8 +1273,8 @@
       "track": [
         {
           "rid": 53,
-          "origin": "开平前陡河村",
-          "accurate": 2
+          "accurate": 2,
+          "origin": "开平前陡河村"
         },
         {
           "rid": 118,
@@ -1312,6 +1316,8 @@
       "area": "开平区",
       "track": [
         {
+          "rid": 53,
+          "accurate": 1,
           "origin": "陡河村"
         },
         {
@@ -4297,8 +4303,8 @@
         },
         {
           "rid": 342,
-          "origin": "南关批发市场",
-          "accurate": 2
+          "accurate": 2,
+          "origin": "南关批发市场"
         },
         {
           "rid": 11,
@@ -4718,8 +4724,8 @@
         },
         {
           "rid": 385,
-          "origin": "高新老庄子村十字街",
-          "accurate": 2
+          "accurate": 2,
+          "origin": "高新老庄子村十字街"
         },
         {
           "origin": "老庄子集市"

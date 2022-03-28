@@ -107,6 +107,7 @@ export default {
       request.get('data/data.json')
           .then(({data}) => {
             const promises = []
+            this.positions = data.positions
             this.maxIndex = data.positions.reduce((a, b) => {
               return a.rid > b.rid ? a.rid : b.rid
             })
@@ -139,7 +140,7 @@ export default {
                 } else {
                   item = {...pos}
                   if (pos.accurate !== 0)
-                    promises.push(this.searchPoint(item))
+                    promises.push(this.searchPoint(item, people))
                 }
                 item.id = `${people.id}-${index}`
                 return item
@@ -152,15 +153,7 @@ export default {
 
             Promise.all(promises)
                 .then(resList => {
-                  resList.forEach(({data, pos}) => {
-                    data.district = pos.district
-                    data.name = pos.name
-                    data.location = pos.location
-                    data.accurate = pos.accurate
-                  })
-                  this.allPeoples = peoples
-                  this.peoples = peoples
-                  this.loading = false
+                  this.searchCallback(resList, peoples)
                 })
                 .catch(err => {
                   console.log('err', err)
@@ -185,11 +178,37 @@ export default {
         return inDate && inArea
       })
     },
-    searchPoint(data) {
+    searchCallback(resList, peoples) {
+      const refs = []
+      resList.forEach(({data, pos, people}) => {
+        data.district = pos.district
+        data.name = pos.name
+        data.location = pos.location
+        data.accurate = pos.accurate
+
+        if (pos.rid) {
+          refs.push(
+              [
+                people.id,
+                JSON.stringify({rid: pos.rid, accurate: 1, origin: data.origin}),
+                data.name
+              ]
+          )
+        }
+      })
+
+      console.table(refs)
+      this.allPeoples = peoples
+      this.peoples = peoples
+      this.loading = false
+    },
+    searchPoint(data, people) {
       return new Promise((resolve, reject) => {
         this.autoComplete.search(data.origin, (status, result) => {
           if (result) {
-            let pos
+            let pos = {
+              accurate: 0
+            }
             if (result.info === 'OK') {
               const {district, name, location} = result.tips[0]
               pos = {
@@ -199,12 +218,17 @@ export default {
                 },
                 accurate: 1
               }
-            } else {
-              pos = {
-                accurate: 0
+
+              // 检查位置集中有没有对应的定位数据
+              const refPos = this.positions.find(({location: {lng, lat}}) => {
+                return lng === pos.location.lng && lat === pos.location.lat
+              })
+
+              if (refPos) {
+                pos.rid = refPos.rid
               }
             }
-            resolve({data, pos})
+            resolve({data, pos, people})
           } else {
             reject({status, result, origin: data.origin})
           }
