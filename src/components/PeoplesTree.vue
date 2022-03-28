@@ -35,8 +35,7 @@ export default {
       defaultProps: {
         label: 'label',
         children: 'children'
-      },
-      rid: 0
+      }
     }
   },
   props: {
@@ -96,11 +95,6 @@ export default {
       ]
     }
   },
-  watch: {
-    maxIndex(value) {
-      this.rid = value
-    }
-  },
   methods: {
     handleCheck(e, { checkedNodes }) {
       const nodes = checkedNodes.filter(node => !node.children)
@@ -113,8 +107,10 @@ export default {
     },
     handleContextmenu(e, data) {
       if (data.location) {
+        const rid = this.maxIndex + 1
+        this.$emit('update:maxIndex', rid)
         const json = JSON.stringify({
-          rid: ++this.rid,
+          rid,
           district: data.district,
           name: data.name,
           location: data.location

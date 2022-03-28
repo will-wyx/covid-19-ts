@@ -6,7 +6,7 @@
         :peoples="peoples"
         :expanded="expanded"
         :loading="loading"
-        :max-index="maxIndex"
+        :max-index.sync="maxIndex"
         @change="handleChange"
         @click="handleNodeClick"
     />
@@ -180,6 +180,7 @@ export default {
     },
     searchCallback(resList, peoples) {
       const refs = []
+      const poss = []
       resList.forEach(({data, pos, people}) => {
         data.district = pos.district
         data.name = pos.name
@@ -194,10 +195,15 @@ export default {
                 data.name
               ]
           )
+
+          if(pos.accurate === -1) {
+            poss.push({rid: pos.rid, district: pos.district, name: pos.name, location: pos.location})
+          }
         }
       })
 
       console.table(refs)
+      console.log(poss)
       this.allPeoples = peoples
       this.peoples = peoples
       this.loading = false
@@ -226,6 +232,12 @@ export default {
 
               if (refPos) {
                 pos.rid = refPos.rid
+              } else {
+                pos.rid = ++this.maxIndex
+                pos.accurate = -1
+                this.positions.push({
+                  ...pos
+                })
               }
             }
             resolve({data, pos, people})
