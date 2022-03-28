@@ -118,12 +118,7 @@ export default {
         console.log(json)
       }
     },
-    checkAreas(areas) {
-      const keys = []
-      this.peoples.forEach(people => {
-        if (areas.some(area => area === people.area))
-          keys.push(people.id)
-      })
+    checkKeys(keys) {
       const tree = this.$refs.tree
       tree.setCheckedKeys(keys)
       const checkedNodes = tree.getCheckedNodes()

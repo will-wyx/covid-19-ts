@@ -50,12 +50,16 @@
             <span class="app__option__count">{{ item.countQ }}+{{ item.countW }}</span>
           </el-option>
         </el-select>
-        <el-tag class="app__top__item" v-for="pos of topPositions" :key="pos.rid" size="mini">{{
+        <el-tag class="app__top__item" v-for="pos of topPositions" :key="pos.rid" size="mini"
+                @click="handleTagClick(pos)"
+        >{{
             pos.name
           }}[{{ pos.count }}]
         </el-tag>
       </div>
-      <a-map class="app__map" :points="points" ref="map" @click="handleMarkerClick"/>
+      <a-map class="app__map" :points="points" ref="map" @click="handleMarkerClick"
+             @marker-item-click="handleMarkerItemClick"
+      />
     </div>
   </div>
 </template>
@@ -69,7 +73,7 @@ import AMapLoader from '@amap/amap-jsapi-loader';
 
 export default {
   name: 'App',
-  components: { PeoplesTree, AMap },
+  components: {PeoplesTree, AMap},
   data() {
     return {
       allPeoples: [],
@@ -116,7 +120,7 @@ export default {
     loadData() {
       this.loading = true
       request.get('data/data.json')
-          .then(({ data }) => {
+          .then(({data}) => {
             const promises = []
             this.positions = data.positions
             this.maxIndex = this.positions.reduce((a, b) => {
@@ -126,7 +130,7 @@ export default {
               const peopleType = people.id.slice(0, 1)
               let area = this.options.areas.find(a => a.value === people.area)
               if (!area) {
-                area = { value: people.area, label: people.area, checked: true, countQ: 0, countW: 0 }
+                area = {value: people.area, label: people.area, checked: true, countQ: 0, countW: 0}
                 area[`count${peopleType}`] = 1
                 this.options.areas.push(area)
               } else {
@@ -136,7 +140,7 @@ export default {
 
               let date = this.options.dates.find(d => d.value === people.date)
               if (!date) {
-                date = { value: people.date, label: people.date.slice(5), checked: true, countQ: 0, countW: 0 }
+                date = {value: people.date, label: people.date.slice(5), checked: true, countQ: 0, countW: 0}
                 date[`count${peopleType}`] = 1
                 this.options.dates.push(date)
               } else {
@@ -153,16 +157,16 @@ export default {
                   } else {
                     position.count = 1
                   }
-                  item = { ...pos, ...position }
+                  item = {...pos, ...position}
                 } else {
-                  item = { ...pos }
+                  item = {...pos}
                   if (pos.accurate !== 0)
                     promises.push(this.searchPoint(item, people))
                 }
                 item.id = `${people.id}-${index}`
                 return item
               })
-              return { ...people, track }
+              return {...people, track}
             })
 
             this.areas = this.options.areas.map(a => a.value)
@@ -187,9 +191,24 @@ export default {
       const ids = data.map(item => item.id.slice(0, 5))
       this.expanded = ids
     },
+    handleMarkerItemClick(id) {
+      const {track} = this.peoples.find(p => p.id === id)
+      console.table(track.map(({id, origin}) => ({id, origin})))
+    },
+    handleTagClick({rid}) {
+      const ids = []
+      this.peoples.forEach(({track}) => {
+        track.forEach(t => {
+          if (t.rid === rid) {
+            ids.push(t.id)
+          }
+        })
+      })
+      this.$refs.tree.checkKeys(ids)
+    },
     filterPeoples() {
       this.peoples = this.allPeoples.filter(people => {
-        const { date, area } = people
+        const {date, area} = people
         const inDate = this.dates.some(d => d === date)
         const inArea = this.areas.some(a => a === area)
         return inDate && inArea
@@ -198,7 +217,7 @@ export default {
     searchCallback(resList, peoples) {
       const refs = []
       const poss = []
-      resList.forEach(({ data, pos, people }) => {
+      resList.forEach(({data, pos, people}) => {
         data.district = pos.district
         data.name = pos.name
         data.location = pos.location
@@ -208,13 +227,13 @@ export default {
           refs.push(
               [
                 people.id,
-                JSON.stringify({ rid: pos.rid, accurate: 1, origin: data.origin }),
+                JSON.stringify({rid: pos.rid, accurate: 1, origin: data.origin}),
                 data.name
               ]
           )
 
           if (pos.accurate === -1) {
-            poss.push({ rid: pos.rid, district: pos.district, name: pos.name, location: pos.location })
+            poss.push({rid: pos.rid, district: pos.district, name: pos.name, location: pos.location})
           }
         }
       })
@@ -225,8 +244,8 @@ export default {
       this.peoples = peoples
       this.loading = false
       this.positions.sort((a, b) => b.count > a.count ? 1 : -1)
-      console.table(this.positions.slice(0, this.top * 2).map(({district, name, count }) => {
-        return { district, name, count }
+      console.table(this.positions.slice(0, this.top * 2).map(({district, name, count}) => {
+        return {district, name, count}
       }))
     },
     searchPoint(data, people) {
@@ -237,7 +256,7 @@ export default {
               accurate: 0
             }
             if (result.info === 'OK') {
-              const { district, name, location } = result.tips[0]
+              const {district, name, location} = result.tips[0]
               pos = {
                 district, name, location: {
                   lng: location.lng,
@@ -247,7 +266,7 @@ export default {
               }
 
               // 检查位置集中有没有对应的定位数据
-              const refPos = this.positions.find(({ location: { lng, lat } }) => {
+              const refPos = this.positions.find(({location: {lng, lat}}) => {
                 return lng === pos.location.lng && lat === pos.location.lat
               })
 
@@ -266,9 +285,9 @@ export default {
                 })
               }
             }
-            resolve({ data, pos, people })
+            resolve({data, pos, people})
           } else {
-            reject({ status, result, origin: data.origin })
+            reject({status, result, origin: data.origin})
           }
         })
       })
@@ -328,6 +347,7 @@ html, body, .app {
 
   &__top__item {
     margin-right: 4px;
+    cursor: pointer;
   }
 }
 </style>
