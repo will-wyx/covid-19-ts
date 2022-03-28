@@ -225,6 +225,9 @@ export default {
       this.peoples = peoples
       this.loading = false
       this.positions.sort((a, b) => b.count > a.count ? 1 : -1)
+      console.table(this.positions.slice(0, this.top * 2).map(({district, name, count }) => {
+        return { district, name, count }
+      }))
     },
     searchPoint(data, people) {
       return new Promise((resolve, reject) => {

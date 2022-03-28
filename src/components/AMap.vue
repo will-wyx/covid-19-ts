@@ -41,7 +41,7 @@ export default {
       const points = []
       value.forEach(point => {
         if (point.location) {
-          points.push({id: point.id, title: point.origin, lnglat: [point.location.lng, point.location.lat]})
+          points.push({ id: point.id, title: point.origin, lnglat: [point.location.lng, point.location.lat] })
         } else {
           console.log(point.id, point.origin)
         }
@@ -50,12 +50,12 @@ export default {
       if (this.cluster) {
         this.cluster.setMap(null);
       }
-      this.cluster = new this.AMap.MarkerCluster(this.map, points, {gridSize: 60});
-      this.cluster.on('click', ({clusterData, lnglat}) => {
+      this.cluster = new this.AMap.MarkerCluster(this.map, points, { gridSize: 60 });
+      this.cluster.on('click', ({ clusterData, lnglat }) => {
         const currentCluster = []
         clusterData.forEach(item => {
-          const {id, title} = item;
-          currentCluster.push({id, title})
+          const { id, title } = item;
+          currentCluster.push({ id, title })
         })
         this.currentCluster = currentCluster
         this.infoWindow.open(this.map, lnglat)
@@ -85,12 +85,16 @@ export default {
           center: [118.144541, 39.696604]
         })
 
-        this.map.on('rightclick', ({lnglat}) => {
+        this.map.on('rightclick', ({ lnglat }) => {
           this.geocoder.getAddress(lnglat, (status, result) => {
-            const {regeocode: {formattedAddress}} = result
+            const { regeocode: { formattedAddress } } = result
             this.geocoder.getLocation(formattedAddress, (s, r) => {
-              const [{location: {lng, lat}}] = r.geocodes
-              console.log(JSON.stringify({location: {lng, lat}}))
+              const [{ location: { lng, lat } }] = r.geocodes
+              console.log(
+                  formattedAddress,
+                  { lng: lnglat.lng, lat: lnglat.lat },
+                  JSON.stringify({ location: { lng, lat } })
+              )
             })
           })
         })
@@ -105,7 +109,7 @@ export default {
         console.log(e)
       })
     },
-    setCenter({location}) {
+    setCenter({ location }) {
       this.map.setZoomAndCenter(17, [location.lng, location.lat], true)
     }
   },
