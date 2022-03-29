@@ -23,8 +23,8 @@
           @change="handleCompleteChange"
       >
         <el-option
-            v-for="item in options"
-            :key="item.value"
+            v-for="(item, index) in options"
+            :key="index"
             :label="item.label"
             :value="item.value">
         </el-option>
@@ -118,10 +118,10 @@ export default {
             const { regeocode: { formattedAddress } } = result
             this.geocoder.getLocation(formattedAddress, (s, r) => {
               const [{ location: { lng, lat } }] = r.geocodes
-              console.log(
-                  formattedAddress,
-                  { lng: lnglat.lng, lat: lnglat.lat },
-                  JSON.stringify({ location: { lng, lat } })
+              console.log('%s\n%s\n%s',
+                  JSON.stringify({ lng: lnglat.lng, lat: lnglat.lat }),
+                  JSON.stringify({ lng, lat  }),
+                  formattedAddress
               )
             })
           })
@@ -142,8 +142,8 @@ export default {
         this.loading = true
         this.autoComplete.search(query, (status, result) => {
           if (result) {
-            this.options = result.tips.map(({ id, district, name, location }) => {
-              return { value: id, label: `${district}${name}`, location }
+            this.options = result.tips.map(({ id, district, name, location, address }) => {
+              return { value: id, label: `${name}`, location, district, address }
             })
             this.loading = false
           }
@@ -175,6 +175,8 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 
   &__map {
     width: 100%;
