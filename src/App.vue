@@ -316,6 +316,8 @@ html, body, .app {
   &__main {
     flex: 1;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 
     #{$app + '__filter'} {
       padding: 2px 4px;
